@@ -2600,22 +2600,6 @@
 					<int key="connectionID">561</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">contentSet: selection.messages</string>
-						<reference key="source" ref="1043421619"/>
-						<reference key="destination" ref="708469932"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="1043421619"/>
-							<reference key="NSDestination" ref="708469932"/>
-							<string key="NSLabel">contentSet: selection.messages</string>
-							<string key="NSBinding">contentSet</string>
-							<string key="NSKeyPath">selection.messages</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">565</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">add:</string>
 						<reference key="source" ref="144768510"/>
@@ -2633,22 +2617,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">contentSet: selection.topics</string>
-						<reference key="source" ref="144768510"/>
-						<reference key="destination" ref="708469932"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="144768510"/>
-							<reference key="NSDestination" ref="708469932"/>
-							<string key="NSLabel">contentSet: selection.topics</string>
-							<string key="NSBinding">contentSet</string>
-							<string key="NSKeyPath">selection.topics</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">588</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: arrangedObjects.name</string>
 						<reference key="source" ref="948623714"/>
 						<reference key="destination" ref="144768510"/>
@@ -2662,6 +2630,54 @@
 						</object>
 					</object>
 					<int key="connectionID">593</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">managedObjectContext: managedObjectContext</string>
+						<reference key="source" ref="144768510"/>
+						<reference key="destination" ref="612578685"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="144768510"/>
+							<reference key="NSDestination" ref="612578685"/>
+							<string key="NSLabel">managedObjectContext: managedObjectContext</string>
+							<string key="NSBinding">managedObjectContext</string>
+							<string key="NSKeyPath">managedObjectContext</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">595</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">contentSet: selection.topics</string>
+						<reference key="source" ref="144768510"/>
+						<reference key="destination" ref="708469932"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="144768510"/>
+							<reference key="NSDestination" ref="708469932"/>
+							<string key="NSLabel">contentSet: selection.topics</string>
+							<string key="NSBinding">contentSet</string>
+							<string key="NSKeyPath">selection.topics</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">600</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">contentSet: selection.messages</string>
+						<reference key="source" ref="1043421619"/>
+						<reference key="destination" ref="144768510"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="1043421619"/>
+							<reference key="NSDestination" ref="144768510"/>
+							<string key="NSLabel">contentSet: selection.messages</string>
+							<string key="NSBinding">contentSet</string>
+							<string key="NSKeyPath">selection.messages</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">601</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4148,6 +4164,8 @@
 					<string>57.IBPluginDependency</string>
 					<string>57.ImportedFromIB2</string>
 					<string>570.IBPluginDependency</string>
+					<string>571.IBPluginDependency</string>
+					<string>574.IBPluginDependency</string>
 					<string>575.IBPluginDependency</string>
 					<string>576.IBPluginDependency</string>
 					<string>577.IBPluginDependency</string>
@@ -4422,6 +4440,8 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
@@ -4460,7 +4480,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">593</int>
+			<int key="maxID">601</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
