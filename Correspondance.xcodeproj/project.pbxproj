@@ -28,7 +28,7 @@
 		77C8280B06725ACE000B614F /* Correspondance_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Correspondance_AppDelegate.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* Correspondance_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Correspondance_AppDelegate.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Correspondance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Correspondance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Correspondence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Correspondence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* Correspondance.app */,
+				8D1107320486CEB800E47090 /* Correspondence.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,7 +145,7 @@
 			name = Correspondance;
 			productInstallPath = "$(HOME)/Applications";
 			productName = Correspondance;
-			productReference = 8D1107320486CEB800E47090 /* Correspondance.app */;
+			productReference = 8D1107320486CEB800E47090 /* Correspondence.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +227,7 @@
 				GCC_PREFIX_HEADER = Correspondance_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = Correspondance;
+				PRODUCT_NAME = Correspondence;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -242,7 +242,7 @@
 				GCC_PREFIX_HEADER = Correspondance_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = Correspondance;
+				PRODUCT_NAME = Correspondence;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
