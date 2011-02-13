@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D1107260486CEB800E47090"
                BuildableName = "Correspondance.app"
-               BlueprintName = "Correspondance"
-               ReferencedContainer = "container:Correspondance.xcodeproj">
+               BlueprintName = "Correspondence"
+               ReferencedContainer = "container:Correspondence.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,8 +43,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
             BuildableName = "Correspondance.app"
-            BlueprintName = "Correspondance"
-            ReferencedContainer = "container:Correspondance.xcodeproj">
+            BlueprintName = "Correspondence"
+            ReferencedContainer = "container:Correspondence.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -61,8 +61,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
             BuildableName = "Correspondance.app"
-            BlueprintName = "Correspondance"
-            ReferencedContainer = "container:Correspondance.xcodeproj">
+            BlueprintName = "Correspondence"
+            ReferencedContainer = "container:Correspondence.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
