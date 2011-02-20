@@ -1,0 +1,4 @@
+1. Go to http://builds.balsamiq.com/b/mockups-web-demo/
+2. Mockup -> Clear Mockup
+3. Mockup -> Import Mockup XML...
+4. Paste the content of correspondence-ui-mock.xml and hit Import
