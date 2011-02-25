@@ -18,3 +18,5 @@ VersionX-revision.h
 # build products
 build/
 *.[oa]
+
+xcuserdata/*
