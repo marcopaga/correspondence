@@ -19,4 +19,5 @@ VersionX-revision.h
 build/
 *.[oa]
 
+xcuserdata/
 xcuserdata/*
