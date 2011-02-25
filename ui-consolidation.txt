@@ -1,0 +1,8 @@
+Basis: Marcos ui mock
++ Drawer für Kontakte
++ Textinput fürs Hinzufügen von Kontakten
++ Outlook like preview von Messages
++ Topics und Messages
+++ müssen sich optisch unterscheiden
+++ sind in einer ListView
+++ haben eigene Icons für Aktionen Antworten/Drucken
