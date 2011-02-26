@@ -1,6 +1,6 @@
 //
 //  main.m
-//  Correspondance
+//  Correspondence
 //
 //  Created by MacRae Linton on 8/31/09.
 //  Copyright Apple Inc. 2009. All rights reserved.

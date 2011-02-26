@@ -1,6 +1,6 @@
 //
 //  Message.h
-//  Correspondance
+//  Correspondence
 //
 //  Created by Marco Paga on 13.02.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.

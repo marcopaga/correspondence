@@ -1,19 +1,19 @@
 //
-//  Correspondance_AppDelegate.m
-//  Correspondance
+//  Correspondence_AppDelegate.m
+//  Correspondence
 //
 //  Created by MacRae Linton on 8/31/09.
 //  Copyright Apple Inc. 2009 . All rights reserved.
 //
 
-#import "Correspondance_AppDelegate.h"
+#import "Correspondence_AppDelegate.h"
 
-@implementation Correspondance_AppDelegate
+@implementation Correspondence_AppDelegate
 
 
 /**
     Returns the support folder for the application, used to store the Core Data
-    store file.  This code uses a folder named "Correspondance" for
+    store file.  This code uses a folder named "Correspondence" for
     the content, either in the NSApplicationSupportDirectory location or (if the
     former cannot be found), the system's temporary directory.
  */
@@ -63,10 +63,10 @@
     fileManager = [NSFileManager defaultManager];
     applicationSupportFolder = [self applicationSupportFolder];
     if ( ![fileManager fileExistsAtPath:applicationSupportFolder isDirectory:NULL] ) {
-        [fileManager createDirectoryAtPath:applicationSupportFolder attributes:nil];
+        [fileManager createDirectoryAtPath:applicationSupportFolder withIntermediateDirectories:YES attributes:nil error:&error];
     }
     
-    url = [NSURL fileURLWithPath: [applicationSupportFolder stringByAppendingPathComponent: @"Correspondance.xml"]];
+    url = [NSURL fileURLWithPath: [applicationSupportFolder stringByAppendingPathComponent: @"Correspondence.xml"]];
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self managedObjectModel]];
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:nil error:&error]){
         [[NSApplication sharedApplication] presentError:error];

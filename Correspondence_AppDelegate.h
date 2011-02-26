@@ -1,6 +1,6 @@
 //
-//  Correspondance_AppDelegate.h
-//  Correspondance
+//  Correspondence_AppDelegate.h
+//  Correspondence
 //
 //  Created by MacRae Linton on 8/31/09.
 //  Copyright Apple Inc. 2009 . All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Correspondance_AppDelegate : NSObject 
+@interface Correspondence_AppDelegate : NSObject 
 {
     IBOutlet NSWindow *window;
     
