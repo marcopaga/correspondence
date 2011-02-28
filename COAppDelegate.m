@@ -6,9 +6,9 @@
 //  Copyright Apple Inc. 2009 . All rights reserved.
 //
 
-#import "Correspondence_AppDelegate.h"
+#import "COAppDelegate.h"
 
-@implementation Correspondence_AppDelegate
+@implementation COAppDelegate
 
 
 /**

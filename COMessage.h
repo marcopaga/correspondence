@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface Message : NSManagedObject {
+@interface COMessage : NSManagedObject {
 @private
 }
 @property (nonatomic, retain) NSString * notes;

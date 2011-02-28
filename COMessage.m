@@ -6,10 +6,10 @@
 //  Copyright (c) 2011 The Correspondence Team. All rights reserved.
 //
 
-#import "Message.h"
+#import "COMessage.h"
 
 
-@implementation Message
+@implementation COMessage
 @dynamic notes;
 @dynamic fromMe;
 @dynamic date;
