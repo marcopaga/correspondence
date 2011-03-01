@@ -3,7 +3,7 @@
 //  Correspondence
 //
 //  Created by Marco Paga on 13.02.11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 The Correspondence Team. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
