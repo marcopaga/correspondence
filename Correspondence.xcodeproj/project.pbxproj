@@ -14,6 +14,8 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		A950FDB51307E857009011EE /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = A950FDB41307E857009011EE /* Message.m */; };
+		A96CABB21323C5B40074709C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94CF670131D9B89003A00AF /* AddressBook.framework */; };
+		A96CABB31323C5B50074709C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94CF670131D9B89003A00AF /* AddressBook.framework */; };
 		A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CBB01318444200AAC978 /* Cocoa.framework */; };
 		A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB51318444200AAC978 /* InfoPlist.strings */; };
 		A975CBBA1318444200AAC978 /* UnitTests.h in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB91318444200AAC978 /* UnitTests.h */; };
@@ -52,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				A96CABB21323C5B40074709C /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */,
+				A96CABB31323C5B50074709C /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +84,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A94CF670131D9B89003A00AF /* AddressBook.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -107,7 +112,6 @@
 		29B97314FDCFA39411CA2CEA /* Correspondence */ = {
 			isa = PBXGroup;
 			children = (
-				A94CF670131D9B89003A00AF /* AddressBook.framework */,
 				7756732906782D8800D1FEB8 /* Models */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,

@@ -2,16 +2,17 @@
 //  UnitTests.h
 //  UnitTests
 //
-//  Created by Marco Paga on 25.02.11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 The Correspondence Team. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import <AddressBook/AddressBook.h>
 
 
 @interface UnitTests : SenTestCase {
 @private
-    
+    ABRecord* testRecord;
+    NSString* uniqueId;
 }
 
 @end
