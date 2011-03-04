@@ -7,10 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PeopleViewController.h"
 
-@interface Correspondence_AppDelegate : NSObject 
+@interface Correspondence_AppDelegate : NSObject
 {
     IBOutlet NSWindow *window;
+    IBOutlet NSView *peopleView;
+    NSMutableArray *viewControllers;
+    IBOutlet ManagingViewController *peopleViewController;
+    IBOutlet NSArrayController *topicsArrayController;
     
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;

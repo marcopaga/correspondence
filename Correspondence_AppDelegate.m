@@ -10,6 +10,29 @@
 
 @implementation Correspondence_AppDelegate
 
+- (id) init {
+    [super init];
+    viewControllers = [[NSMutableArray alloc] init];
+    
+    ManagingViewController *vc;
+    vc = [[PeopleViewController alloc] init];
+    [vc setManagedObjectContext:[self managedObjectContext]];
+    [viewControllers addObject:vc];
+
+    peopleViewController = vc;
+    [peopleViewController retain];
+    
+    [topicsArrayController bind:NSContentSetBinding toObject:peopleViewController.arrayController withKeyPath:@"topics" options:nil];
+
+    
+    return self;
+}
+
+- (void)awakeFromNib {
+    
+    [[peopleViewController view] setFrame:[peopleView frame]];
+    [peopleView addSubview:[peopleViewController view]];
+}
 
 /**
     Returns the support folder for the application, used to store the Core Data
@@ -176,7 +199,7 @@
  */
  
 - (void) dealloc {
-
+    [viewControllers release];
     [managedObjectContext release], managedObjectContext = nil;
     [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
     [managedObjectModel release], managedObjectModel = nil;
