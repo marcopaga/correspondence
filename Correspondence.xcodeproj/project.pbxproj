@@ -14,6 +14,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A94A34F21327D6D100D4F915 /* COPeoplePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */; };
 		A95D7BB713275BC10019DEEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFA8991323C4B900E42B00 /* AddressBook.framework */; };
 		A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CBB01318444200AAC978 /* Cocoa.framework */; };
 		A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB51318444200AAC978 /* InfoPlist.strings */; };
@@ -38,6 +39,8 @@
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Correspondence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Correspondence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94A34F01327D6D100D4F915 /* COPeoplePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPeoplePickerController.h; sourceTree = "<group>"; };
+		A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPeoplePickerController.m; sourceTree = "<group>"; };
 		A975CBAF1318444200AAC978 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A975CBB01318444200AAC978 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A975CBB41318444200AAC978 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -73,10 +76,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2E2A5EC71326727700D7C5EE /* COMessage.h */,
-				2E2A5EC81326727700D7C5EE /* COMessage.m */,
 				2E256C2A131876A200AE7F9E /* COAppDelegate.h */,
 				2E256C2B131876A200AE7F9E /* COAppDelegate.m */,
+				A94A34F01327D6D100D4F915 /* COPeoplePickerController.h */,
+				A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -112,6 +115,7 @@
 		29B97314FDCFA39411CA2CEA /* Correspondence */ = {
 			isa = PBXGroup;
 			children = (
+				A95D7BBE132760970019DEEB /* Entities */,
 				7756732906782D8800D1FEB8 /* Models */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -158,6 +162,15 @@
 				2E256C281318760700AE7F9E /* Correspondence_DataModel.xcdatamodel */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		A95D7BBE132760970019DEEB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2E2A5EC71326727700D7C5EE /* COMessage.h */,
+				2E2A5EC81326727700D7C5EE /* COMessage.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 		A975CBB21318444200AAC978 /* UnitTests */ = {
@@ -290,6 +303,7 @@
 				2E256C291318760700AE7F9E /* Correspondence_DataModel.xcdatamodel in Sources */,
 				2E256C2C131876A200AE7F9E /* COAppDelegate.m in Sources */,
 				2E2A5EC91326727700D7C5EE /* COMessage.m in Sources */,
+				A94A34F21327D6D100D4F915 /* COPeoplePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

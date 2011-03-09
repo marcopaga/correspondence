@@ -6,7 +6,6 @@
 //
 
 #import "UnitTests.h"
-#import <AddressBook/AddressBook.h>
 
 
 @implementation UnitTests
