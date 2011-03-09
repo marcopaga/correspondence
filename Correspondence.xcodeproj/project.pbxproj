@@ -14,6 +14,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A95D7BB713275BC10019DEEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFA8991323C4B900E42B00 /* AddressBook.framework */; };
 		A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CBB01318444200AAC978 /* Cocoa.framework */; };
 		A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB51318444200AAC978 /* InfoPlist.strings */; };
 		A975CBBA1318444200AAC978 /* UnitTests.h in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB91318444200AAC978 /* UnitTests.h */; };
@@ -53,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				A95D7BB713275BC10019DEEB /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
