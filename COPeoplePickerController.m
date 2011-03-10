@@ -27,24 +27,28 @@
 }
 
 - (IBAction)addSelectedPerson:(id)sender {
-    NSArray* selectedRecords = peoplePicker.selectedRecords;
-    assert([selectedRecords count] == 1);
-    ABPerson* selectedPerson = [selectedRecords objectAtIndex:0];
-    
-    NSString* firstName = [selectedPerson valueForProperty:kABFirstNameProperty];
-    NSString* lastName = [selectedPerson valueForProperty:kABLastNameProperty];
-    NSString* name = [NSString stringWithFormat: @"%@ %@", firstName,lastName];
-    
-    NSLog(name);
-    NSLog([selectedPerson uniqueId]);
-    
-    NSManagedObjectContext* managedObjectContext = [[[NSApplication sharedApplication] delegate] managedObjectContext];
-    assert(managedObjectContext != Nil);
-    
-    NSManagedObject* newEntity = [NSEntityDescription insertNewObjectForEntityForName:@"AddressbookPerson" inManagedObjectContext:managedObjectContext];
-    [newEntity setValue:[selectedPerson uniqueId] forKey:@"uniqueId"];
-    [newEntity setValue:name forKey:@"name"];
-    //TODO: Check for error
-    [managedObjectContext save:nil];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSArray* selectedRecords = peoplePicker.selectedRecords;
+        assert([selectedRecords count] == 1);
+        ABPerson* selectedPerson = [selectedRecords objectAtIndex:0];
+        
+        NSString* firstName = [selectedPerson valueForProperty:kABFirstNameProperty];
+        NSString* lastName = [selectedPerson valueForProperty:kABLastNameProperty];
+        NSString* name = [NSString stringWithFormat: @"%@ %@", firstName,lastName];
+        
+        NSLog(name);
+        NSLog([selectedPerson uniqueId]);
+        
+        NSManagedObjectContext* managedObjectContext = [[[NSApplication sharedApplication] delegate] managedObjectContext];
+        assert(managedObjectContext != Nil);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSManagedObject* newEntity = [NSEntityDescription insertNewObjectForEntityForName:@"AddressbookPerson" inManagedObjectContext:managedObjectContext];
+            [newEntity setValue:[selectedPerson uniqueId] forKey:@"uniqueId"];
+            [newEntity setValue:name forKey:@"name"];
+            [managedObjectContext save:nil];
+        });
+        //TODO: Check for error
+    });
 }
 @end
