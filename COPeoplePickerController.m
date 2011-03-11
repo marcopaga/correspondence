@@ -51,4 +51,16 @@
         //TODO: Check for error
     });
 }
+
+- (void)handleDoubleClick:(NSArray*)selectedReceivers {
+    assert(selectedReceivers != nil);
+    if ([selectedReceivers count] == 0) {
+        return;
+    }
+    NSManagedObject* firstSelectedReceiver = [selectedReceivers objectAtIndex:0];
+    assert(firstSelectedReceiver != nil);
+    // DoubleClick handling code here
+    NSLog(@"(DoubleClick) Receiver: %@", firstSelectedReceiver); // can be deleted
+}
+
 @end
