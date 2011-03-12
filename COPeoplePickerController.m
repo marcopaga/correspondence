@@ -61,6 +61,12 @@
     assert(firstSelectedReceiver != nil);
     // DoubleClick handling code here
     NSLog(@"(DoubleClick) Receiver: %@", firstSelectedReceiver); // can be deleted
+    
+    //check for class to open correct editor
+    NSString *uniqueId = [firstSelectedReceiver uniqueId];
+    NSString *urlString = [NSString
+                           stringWithFormat:@"addressbook://%@", uniqueId];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
 }
 
 @end
