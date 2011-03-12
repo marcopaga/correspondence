@@ -15,6 +15,11 @@
     IBOutlet ABPeoplePickerView *peoplePicker;
 }
 
+-(void)registerForAddressBookNotifications;
+-(void)unregisterFromAddressBookNotifications;
 - (IBAction)addSelectedPerson:(id)sender;
-
+-(NSManagedObject*)findRecordByUniqueId: (NSString*)uniqueId;
+-(NSManagedObjectContext*)sharedObjectContext;
+-(NSString*)nameFromRecord:(ABPerson*)person;
+-(void)updateRecord:(NSString*)uniqueId;
 @end
