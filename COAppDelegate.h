@@ -8,13 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface COAppDelegate : NSObject 
+@interface COAppDelegate : NSObject <NSApplicationDelegate>
 {
     IBOutlet NSWindow *window;
     
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
+
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
