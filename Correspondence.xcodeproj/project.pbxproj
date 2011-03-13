@@ -10,6 +10,23 @@
 		2E256C291318760700AE7F9E /* Correspondence_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2E256C281318760700AE7F9E /* Correspondence_DataModel.xcdatamodel */; };
 		2E256C2C131876A200AE7F9E /* COAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E256C2B131876A200AE7F9E /* COAppDelegate.m */; };
 		2E2A5EC91326727700D7C5EE /* COMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A5EC81326727700D7C5EE /* COMessage.m */; };
+		2EBEC344132BC65000C84085 /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33B132BC65000C84085 /* PXListDocumentView.m */; };
+		2EBEC345132BC65000C84085 /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33B132BC65000C84085 /* PXListDocumentView.m */; };
+		2EBEC346132BC65000C84085 /* PXListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33E132BC65000C84085 /* PXListView.m */; };
+		2EBEC347132BC65000C84085 /* PXListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33E132BC65000C84085 /* PXListView.m */; };
+		2EBEC348132BC65000C84085 /* PXListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC341132BC65000C84085 /* PXListViewCell.m */; };
+		2EBEC349132BC65000C84085 /* PXListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC341132BC65000C84085 /* PXListViewCell.m */; };
+		2EBEC34A132BD84B00C84085 /* PXListView+Private.h in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33C132BC65000C84085 /* PXListView+Private.h */; };
+		2EBEC34B132BD84B00C84085 /* PXListView.h in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33D132BC65000C84085 /* PXListView.h */; };
+		2EBEC34C132BD84B00C84085 /* PXListViewDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC342132BC65000C84085 /* PXListViewDelegate.h */; };
+		2EBEC34D132BD84B00C84085 /* PXListViewCell+Private.h in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33F132BC65000C84085 /* PXListViewCell+Private.h */; };
+		2EBEC34E132BD84B00C84085 /* PXListViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC340132BC65000C84085 /* PXListViewCell.h */; };
+		2EBEC34F132BD84B00C84085 /* PXListViewDropHighlight.h in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC343132BC65000C84085 /* PXListViewDropHighlight.h */; };
+		2EBEC350132BD84B00C84085 /* PXListDocumentView.h in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33A132BC65000C84085 /* PXListDocumentView.h */; };
+		2EBEC35B132D4E4000C84085 /* MyListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC35A132D4E3F00C84085 /* MyListViewCell.m */; };
+		2EBEC35C132D4E4000C84085 /* MyListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC35A132D4E3F00C84085 /* MyListViewCell.m */; };
+		2EBEC35E132D4FC000C84085 /* MyListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EBEC35D132D4FC000C84085 /* MyListViewCell.xib */; };
+		2EBEC35F132D4FC000C84085 /* MyListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EBEC35D132D4FC000C84085 /* MyListViewCell.xib */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -34,6 +51,19 @@
 		2E256C2B131876A200AE7F9E /* COAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COAppDelegate.m; sourceTree = "<group>"; };
 		2E2A5EC71326727700D7C5EE /* COMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COMessage.h; sourceTree = "<group>"; };
 		2E2A5EC81326727700D7C5EE /* COMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COMessage.m; sourceTree = "<group>"; };
+		2EBEC33A132BC65000C84085 /* PXListDocumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXListDocumentView.h; path = PXListView/PXListDocumentView.h; sourceTree = "<group>"; };
+		2EBEC33B132BC65000C84085 /* PXListDocumentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXListDocumentView.m; path = PXListView/PXListDocumentView.m; sourceTree = "<group>"; };
+		2EBEC33C132BC65000C84085 /* PXListView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+Private.h"; sourceTree = "<group>"; };
+		2EBEC33D132BC65000C84085 /* PXListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListView.h; sourceTree = "<group>"; };
+		2EBEC33E132BC65000C84085 /* PXListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListView.m; sourceTree = "<group>"; };
+		2EBEC33F132BC65000C84085 /* PXListViewCell+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PXListViewCell+Private.h"; path = "PXListView/PXListViewCell+Private.h"; sourceTree = "<group>"; };
+		2EBEC340132BC65000C84085 /* PXListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXListViewCell.h; path = PXListView/PXListViewCell.h; sourceTree = "<group>"; };
+		2EBEC341132BC65000C84085 /* PXListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXListViewCell.m; path = PXListView/PXListViewCell.m; sourceTree = "<group>"; };
+		2EBEC342132BC65000C84085 /* PXListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewDelegate.h; sourceTree = "<group>"; };
+		2EBEC343132BC65000C84085 /* PXListViewDropHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXListViewDropHighlight.h; path = PXListView/PXListViewDropHighlight.h; sourceTree = "<group>"; };
+		2EBEC359132D4E3F00C84085 /* MyListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyListViewCell.h; path = Classes/MyListViewCell.h; sourceTree = "<group>"; };
+		2EBEC35A132D4E3F00C84085 /* MyListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyListViewCell.m; path = Classes/MyListViewCell.m; sourceTree = "<group>"; };
+		2EBEC35D132D4FC000C84085 /* MyListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyListViewCell.xib; path = Resources/MyListViewCell.xib; sourceTree = "<group>"; };
 		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Correspondence_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Correspondence_Prefix.pch; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -76,6 +106,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2EBEC359132D4E3F00C84085 /* MyListViewCell.h */,
+				2EBEC35A132D4E3F00C84085 /* MyListViewCell.m */,
+				2EBEC339132BC65000C84085 /* PXListView */,
 				2E256C2A131876A200AE7F9E /* COAppDelegate.h */,
 				2E256C2B131876A200AE7F9E /* COAppDelegate.m */,
 				A94A34F01327D6D100D4F915 /* COPeoplePickerController.h */,
@@ -142,6 +175,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+				2EBEC35D132D4FC000C84085 /* MyListViewCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -154,6 +188,41 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EBEC337132BC3EF00C84085 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2EBEC33F132BC65000C84085 /* PXListViewCell+Private.h */,
+				2EBEC340132BC65000C84085 /* PXListViewCell.h */,
+				2EBEC341132BC65000C84085 /* PXListViewCell.m */,
+				2EBEC343132BC65000C84085 /* PXListViewDropHighlight.h */,
+			);
+			name = Cells;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2EBEC338132BC3FF00C84085 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				2EBEC33A132BC65000C84085 /* PXListDocumentView.h */,
+				2EBEC33B132BC65000C84085 /* PXListDocumentView.m */,
+			);
+			name = Misc;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2EBEC339132BC65000C84085 /* PXListView */ = {
+			isa = PBXGroup;
+			children = (
+				2EBEC33C132BC65000C84085 /* PXListView+Private.h */,
+				2EBEC33D132BC65000C84085 /* PXListView.h */,
+				2EBEC33E132BC65000C84085 /* PXListView.m */,
+				2EBEC342132BC65000C84085 /* PXListViewDelegate.h */,
+				2EBEC337132BC3EF00C84085 /* Cells */,
+				2EBEC338132BC3FF00C84085 /* Misc */,
+			);
+			path = PXListView;
 			sourceTree = "<group>";
 		};
 		7756732906782D8800D1FEB8 /* Models */ = {
@@ -264,6 +333,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
+				2EBEC35E132D4FC000C84085 /* MyListViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +343,7 @@
 			files = (
 				A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */,
 				A975CBBA1318444200AAC978 /* UnitTests.h in Resources */,
+				2EBEC35F132D4FC000C84085 /* MyListViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,11 +370,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EBEC34A132BD84B00C84085 /* PXListView+Private.h in Sources */,
+				2EBEC34B132BD84B00C84085 /* PXListView.h in Sources */,
+				2EBEC34C132BD84B00C84085 /* PXListViewDelegate.h in Sources */,
+				2EBEC34D132BD84B00C84085 /* PXListViewCell+Private.h in Sources */,
+				2EBEC34E132BD84B00C84085 /* PXListViewCell.h in Sources */,
+				2EBEC34F132BD84B00C84085 /* PXListViewDropHighlight.h in Sources */,
+				2EBEC350132BD84B00C84085 /* PXListDocumentView.h in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				2E256C291318760700AE7F9E /* Correspondence_DataModel.xcdatamodel in Sources */,
 				2E256C2C131876A200AE7F9E /* COAppDelegate.m in Sources */,
 				2E2A5EC91326727700D7C5EE /* COMessage.m in Sources */,
 				A94A34F21327D6D100D4F915 /* COPeoplePickerController.m in Sources */,
+				2EBEC344132BC65000C84085 /* PXListDocumentView.m in Sources */,
+				2EBEC346132BC65000C84085 /* PXListView.m in Sources */,
+				2EBEC348132BC65000C84085 /* PXListViewCell.m in Sources */,
+				2EBEC35B132D4E4000C84085 /* MyListViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +394,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A975CBBC1318444200AAC978 /* UnitTests.m in Sources */,
+				2EBEC345132BC65000C84085 /* PXListDocumentView.m in Sources */,
+				2EBEC347132BC65000C84085 /* PXListView.m in Sources */,
+				2EBEC349132BC65000C84085 /* PXListViewCell.m in Sources */,
+				2EBEC35C132D4E4000C84085 /* MyListViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +442,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Correspondence_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = Correspondence;
@@ -383,8 +470,11 @@
 		26FC0A890875C7B200E6366F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				GCC_C_LANGUAGE_STANDARD = c99;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_64_BIT)",
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -397,8 +487,11 @@
 		26FC0A8A0875C7B200E6366F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				GCC_C_LANGUAGE_STANDARD = c99;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_64_BIT)",
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -420,7 +513,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";

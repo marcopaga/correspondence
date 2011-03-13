@@ -180,8 +180,52 @@
     [managedObjectContext release], managedObjectContext = nil;
     [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
     [managedObjectModel release], managedObjectModel = nil;
+    
     [super dealloc];
 }
 
+// MessagesListView
+
+- (void)awakeFromNib
+{
+	[listView setCellSpacing:2.0f];
+	[listView setAllowsEmptySelection:YES];
+	[listView setAllowsMultipleSelection:YES];	
+	[listView reloadData];
+}
+
+- (NSUInteger)numberOfRowsInListView: (PXListView*)aListView
+{
+#pragma unused(aListView)
+	return [[messageArrayController arrangedObjects] count];
+}
+
+- (PXListViewCell*)listView:(PXListView*)aListView cellForRow:(NSUInteger)row
+{
+	MyListViewCell *cell = (MyListViewCell*)[aListView dequeueCellWithReusableIdentifier:@"MyListViewCell"];
+	
+	if(!cell) {
+		cell = [MyListViewCell cellLoadedFromNibNamed:@"MyListViewCell" reusableIdentifier:@"MyListViewCell"];
+	}
+    
+    NSString* text = [[[messageArrayController arrangedObjects] objectAtIndex:row] valueForKey:@"subjectLine"];
+	
+	// Set up the new cell:
+	[[cell titleLabel] setStringValue:text];
+	
+	return cell;
+}
+
+- (CGFloat)listView:(PXListView*)aListView heightOfRow:(NSUInteger)row
+{
+	return 50;
+}
+
+// Messages are shown for a selected Topic
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
+    [listView reloadData];
+}
+
+// When Messages are edited via NSTableView the Message listview needs to be reloaded (not needed in final implementation, because there will be no NSTableView)
 
 @end

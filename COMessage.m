@@ -11,6 +11,7 @@
 
 @implementation COMessage
 @dynamic notes;
+@dynamic subjectLine;
 @dynamic fromMe;
 @dynamic date;
 @dynamic topic;
