@@ -1,15 +1,15 @@
 //
-//  COMessageController.m
+//  COTopicController.m
 //  Correspondence
 //
 //  Created by Robert Retzbach on 14.03.11.
 //  Copyright 2011 The Correspondence Team. All rights reserved.
 //
 
-#import "COMessageController.h"
+#import "COTopicController.h"
 
 
-@implementation COMessageController
+@implementation COTopicController
 
 - (id)init
 {
@@ -25,6 +25,8 @@
 {
     [super dealloc];
 }
+
+// MessagesListView
 
 - (void)awakeFromNib
 {
@@ -42,13 +44,13 @@
 
 - (PXListViewCell*)listView:(PXListView*)aListView cellForRow:(NSUInteger)row
 {
-	MessageViewCell *cell = (MessageViewCell*)[aListView dequeueCellWithReusableIdentifier:@"MessageViewCell"];
+	TopicViewCell *cell = (TopicViewCell*)[aListView dequeueCellWithReusableIdentifier:@"TopicViewCell"];
 	
 	if(!cell) {
-		cell = [MessageViewCell cellLoadedFromNibNamed:@"MessageViewCell" reusableIdentifier:@"MessageViewCell"];
+		cell = [TopicViewCell cellLoadedFromNibNamed:@"TopicViewCell" reusableIdentifier:@"TopicViewCell"];
 	}
     
-    NSString* text = [[[self arrangedObjects] objectAtIndex:row] valueForKey:@"subjectLine"];
+    NSString* text = [[[self arrangedObjects] objectAtIndex:row] valueForKey:@"name"];
 	
 	[[cell titleLabel] setStringValue:text];
 	
@@ -60,11 +62,10 @@
 	return 50;
 }
 
-// Messages are shown for a selected Topic
+// Topics are shown for a selected Receiver
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
     [listView reloadData];
 }
 
-// When Messages are edited via NSTableView the Message listview needs to be reloaded (not needed in final implementation, because there will be no NSTableView)
-
 @end
+

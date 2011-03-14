@@ -1,5 +1,5 @@
 //
-//  COMessageController.h
+//  COTopicController.h
 //  Correspondence
 //
 //  Created by Robert Retzbach on 14.03.11.
@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "PXListView.h"
-#import "MessageViewCell.h"
+#import "TopicViewCell.h"
 
+@interface COTopicController : NSArrayController<PXListViewDelegate> {
 
-@interface COMessageController : NSArrayController<PXListViewDelegate> {
-    
     IBOutlet PXListView	*listView;
     
 }
