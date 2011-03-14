@@ -202,10 +202,10 @@
 
 - (PXListViewCell*)listView:(PXListView*)aListView cellForRow:(NSUInteger)row
 {
-	MyListViewCell *cell = (MyListViewCell*)[aListView dequeueCellWithReusableIdentifier:@"MyListViewCell"];
+	MessageViewCell *cell = (MessageViewCell*)[aListView dequeueCellWithReusableIdentifier:@"MessageViewCell"];
 	
 	if(!cell) {
-		cell = [MyListViewCell cellLoadedFromNibNamed:@"MyListViewCell" reusableIdentifier:@"MyListViewCell"];
+		cell = [MessageViewCell cellLoadedFromNibNamed:@"MessageViewCell" reusableIdentifier:@"MessageViewCell"];
 	}
     
     NSString* text = [[[messageArrayController arrangedObjects] objectAtIndex:row] valueForKey:@"subjectLine"];

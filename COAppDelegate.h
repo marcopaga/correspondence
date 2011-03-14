@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "PXListView.h"
-#import "MyListViewCell.h"
+#import "MessageViewCell.h"
 
 @interface COAppDelegate : NSObject <NSApplicationDelegate, PXListViewDelegate>
 {

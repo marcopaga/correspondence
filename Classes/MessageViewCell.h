@@ -1,5 +1,5 @@
 //
-//  MyListViewCell.h
+//  MessageViewCell.h
 //  PXListView
 //
 //  Created by Alex Rozanski on 29/05/2010.
@@ -10,7 +10,7 @@
 
 #import "PXListViewCell.h"
 
-@interface MyListViewCell : PXListViewCell
+@interface MessageViewCell : PXListViewCell
 {
 	NSTextField *titleLabel;
 }
