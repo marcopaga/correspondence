@@ -7,20 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "PXListView.h"
-#import "MessageViewCell.h"
 
-@interface COAppDelegate : NSObject <NSApplicationDelegate, PXListViewDelegate>
+@interface COAppDelegate : NSObject <NSApplicationDelegate>
 {
     IBOutlet NSWindow *window;
-    IBOutlet NSArrayController *messageArrayController;
     
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
-    
-    // Message
-    IBOutlet PXListView	*listView;
 
 }
 

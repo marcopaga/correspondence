@@ -10,6 +10,8 @@
 		2E256C291318760700AE7F9E /* Correspondence_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2E256C281318760700AE7F9E /* Correspondence_DataModel.xcdatamodel */; };
 		2E256C2C131876A200AE7F9E /* COAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E256C2B131876A200AE7F9E /* COAppDelegate.m */; };
 		2E2A5EC91326727700D7C5EE /* COMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A5EC81326727700D7C5EE /* COMessage.m */; };
+		2E3B3197132EA8FB002F8803 /* COMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3B3196132EA8FB002F8803 /* COMessageController.m */; };
+		2E3B3198132EA8FB002F8803 /* COMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3B3196132EA8FB002F8803 /* COMessageController.m */; };
 		2EBEC344132BC65000C84085 /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33B132BC65000C84085 /* PXListDocumentView.m */; };
 		2EBEC345132BC65000C84085 /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33B132BC65000C84085 /* PXListDocumentView.m */; };
 		2EBEC346132BC65000C84085 /* PXListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33E132BC65000C84085 /* PXListView.m */; };
@@ -51,6 +53,8 @@
 		2E256C2B131876A200AE7F9E /* COAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COAppDelegate.m; sourceTree = "<group>"; };
 		2E2A5EC71326727700D7C5EE /* COMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COMessage.h; sourceTree = "<group>"; };
 		2E2A5EC81326727700D7C5EE /* COMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COMessage.m; sourceTree = "<group>"; };
+		2E3B3195132EA8FB002F8803 /* COMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COMessageController.h; sourceTree = "<group>"; };
+		2E3B3196132EA8FB002F8803 /* COMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COMessageController.m; sourceTree = "<group>"; };
 		2EBEC33A132BC65000C84085 /* PXListDocumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXListDocumentView.h; path = PXListView/PXListDocumentView.h; sourceTree = "<group>"; };
 		2EBEC33B132BC65000C84085 /* PXListDocumentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXListDocumentView.m; path = PXListView/PXListDocumentView.m; sourceTree = "<group>"; };
 		2EBEC33C132BC65000C84085 /* PXListView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+Private.h"; sourceTree = "<group>"; };
@@ -61,7 +65,7 @@
 		2EBEC341132BC65000C84085 /* PXListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXListViewCell.m; path = PXListView/PXListViewCell.m; sourceTree = "<group>"; };
 		2EBEC342132BC65000C84085 /* PXListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewDelegate.h; sourceTree = "<group>"; };
 		2EBEC343132BC65000C84085 /* PXListViewDropHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXListViewDropHighlight.h; path = PXListView/PXListViewDropHighlight.h; sourceTree = "<group>"; };
-		2EBEC359132D4E3F00C84085 /* MessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; name = MessageViewCell.h; path = Classes/MessageViewCell.h; sourceTree = "<group>"; };
+		2EBEC359132D4E3F00C84085 /* MessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageViewCell.h; path = Classes/MessageViewCell.h; sourceTree = "<group>"; };
 		2EBEC35A132D4E3F00C84085 /* MessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageViewCell.m; path = Classes/MessageViewCell.m; sourceTree = "<group>"; };
 		2EBEC35D132D4FC000C84085 /* MessageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageViewCell.xib; path = Resources/MessageViewCell.xib; sourceTree = "<group>"; };
 		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				2E256C2B131876A200AE7F9E /* COAppDelegate.m */,
 				A94A34F01327D6D100D4F915 /* COPeoplePickerController.h */,
 				A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */,
+				2E3B3195132EA8FB002F8803 /* COMessageController.h */,
+				2E3B3196132EA8FB002F8803 /* COMessageController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				2EBEC346132BC65000C84085 /* PXListView.m in Sources */,
 				2EBEC348132BC65000C84085 /* PXListViewCell.m in Sources */,
 				2EBEC35B132D4E4000C84085 /* MessageViewCell.m in Sources */,
+				2E3B3197132EA8FB002F8803 /* COMessageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +405,7 @@
 				2EBEC347132BC65000C84085 /* PXListView.m in Sources */,
 				2EBEC349132BC65000C84085 /* PXListViewCell.m in Sources */,
 				2EBEC35C132D4E4000C84085 /* MessageViewCell.m in Sources */,
+				2E3B3198132EA8FB002F8803 /* COMessageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
