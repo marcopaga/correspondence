@@ -26,6 +26,20 @@
     [super dealloc];
 }
 
+- (void)awakeFromNib
+{
+    [_delegate addObserver:self forKeyPath:@"content" options:0 context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (object == _delegate)
+    {
+        [self reloadData];
+        [_delegate removeObserver:self forKeyPath:@"content"];
+    }
+}
+
 - (void)reloadData
 {
     [super reloadData];

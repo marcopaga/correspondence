@@ -60,11 +60,4 @@
 	return 50;
 }
 
-// Messages are shown for a selected Topic
-- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    [listView reloadData];
-}
-
-// When Messages are edited via NSTableView the Message listview needs to be reloaded (not needed in final implementation, because there will be no NSTableView)
-
 @end
