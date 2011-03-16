@@ -13,6 +13,7 @@
 @interface COTopicController : NSArrayController<PXListViewDelegate> {
 
     IBOutlet PXListView	*listView;
+    IBOutlet PXListView	*childView;
     
 }
 

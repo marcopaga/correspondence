@@ -67,5 +67,13 @@
     [listView reloadData];
 }
 
+- (void)listViewSelectionDidChange:(NSNotification*)aNotification {
+    PXListView *aListView = [aNotification object];
+    NSIndexSet *selectedRows = [aListView selectedRows];
+    [self setSelectionIndexes:selectedRows];
+    // TODO RR: Bind message view directly to the topic controller
+    [childView reloadData];
+}
+
 @end
 
