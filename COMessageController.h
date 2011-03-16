@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PXListView.h"
+#import "COListController.h"
 #import "MessageViewCell.h"
 
 
-@interface COMessageController : NSArrayController<PXListViewDelegate> {
-    
-    IBOutlet PXListView	*listView;
+@interface COMessageController : COListController {
     
 }
 

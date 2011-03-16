@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PXListView.h"
+#import "COListController.h"
 #import "TopicViewCell.h"
 
-@interface COTopicController : NSArrayController<PXListViewDelegate> {
+@interface COTopicController : COListController {
 
-    IBOutlet PXListView	*listView;
     IBOutlet PXListView	*childView;
     
 }

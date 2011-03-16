@@ -26,16 +26,6 @@
     [super dealloc];
 }
 
-// MessagesListView
-
-- (void)awakeFromNib
-{
-	[listView setCellSpacing:2.0f];
-	[listView setAllowsEmptySelection:YES];
-	[listView setAllowsMultipleSelection:YES];	
-	[listView reloadData];
-}
-
 - (NSUInteger)numberOfRowsInListView: (PXListView*)aListView
 {
 #pragma unused(aListView)
