@@ -20,6 +20,8 @@
 		2E3B31A3132EBC10002F8803 /* TopicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3B31A1132EBC10002F8803 /* TopicViewCell.xib */; };
 		2E4DF47913316F2A0044C9D1 /* COListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4DF47813316F2A0044C9D1 /* COListController.m */; };
 		2E4DF47A13316F2A0044C9D1 /* COListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4DF47813316F2A0044C9D1 /* COListController.m */; };
+		2E4DF47E133285FF0044C9D1 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4DF47C133285FF0044C9D1 /* up.png */; };
+		2E4DF47F133285FF0044C9D1 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4DF47D133285FF0044C9D1 /* down.png */; };
 		2EBEC344132BC65000C84085 /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33B132BC65000C84085 /* PXListDocumentView.m */; };
 		2EBEC345132BC65000C84085 /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33B132BC65000C84085 /* PXListDocumentView.m */; };
 		2EBEC346132BC65000C84085 /* PXListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33E132BC65000C84085 /* PXListView.m */; };
@@ -72,6 +74,8 @@
 		2E3B31A1132EBC10002F8803 /* TopicViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopicViewCell.xib; path = Resources/TopicViewCell.xib; sourceTree = "<group>"; };
 		2E4DF47713316F2A0044C9D1 /* COListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COListController.h; sourceTree = "<group>"; };
 		2E4DF47813316F2A0044C9D1 /* COListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COListController.m; sourceTree = "<group>"; };
+		2E4DF47C133285FF0044C9D1 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = up.png; path = Resources/Icons/up.png; sourceTree = "<group>"; };
+		2E4DF47D133285FF0044C9D1 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = down.png; path = Resources/Icons/down.png; sourceTree = "<group>"; };
 		2EBEC33A132BC65000C84085 /* PXListDocumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXListDocumentView.h; path = PXListView/PXListDocumentView.h; sourceTree = "<group>"; };
 		2EBEC33B132BC65000C84085 /* PXListDocumentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXListDocumentView.m; path = PXListView/PXListDocumentView.m; sourceTree = "<group>"; };
 		2EBEC33C132BC65000C84085 /* PXListView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+Private.h"; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2E4DF47C133285FF0044C9D1 /* up.png */,
+				2E4DF47D133285FF0044C9D1 /* down.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
@@ -369,6 +375,8 @@
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
 				2EBEC35E132D4FC000C84085 /* MessageViewCell.xib in Resources */,
 				2E3B31A2132EBC10002F8803 /* TopicViewCell.xib in Resources */,
+				2E4DF47E133285FF0044C9D1 /* up.png in Resources */,
+				2E4DF47F133285FF0044C9D1 /* down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

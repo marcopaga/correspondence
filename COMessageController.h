@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "COListController.h"
 #import "MessageViewCell.h"
+#import "COMessage.h"
 
 
 @interface COMessageController : COListController {

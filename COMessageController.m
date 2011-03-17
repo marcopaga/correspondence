@@ -48,9 +48,25 @@
 		cell = [MessageViewCell cellLoadedFromNibNamed:@"MessageViewCell" reusableIdentifier:@"MessageViewCell"];
 	}
     
-    NSString* text = [[[self arrangedObjects] objectAtIndex:row] valueForKey:@"subjectLine"];
-	
+    COMessage *message = [[self arrangedObjects] objectAtIndex:row];
+    
+    // TODO: only set message to cell and let the cell handle the bindings
+    [[cell messageController] setContent:message];
+    
+    NSString *text = [message valueForKey:@"subjectLine"];
 	[[cell titleLabel] setStringValue:text];
+    
+//    NSButton *box = [cell fromMeBox];
+    NSImage *image;
+    Boolean b = [message fromMe];
+    if (b == YES) {
+//        [box setState:NSOnState];
+        image = [NSImage imageNamed:@"up"];
+    } else {
+//        [box setState:NSOffState];
+        image = [NSImage imageNamed:@"down"];
+    }
+    [[cell directionImage] setImage:image];
 	
 	return cell;
 }

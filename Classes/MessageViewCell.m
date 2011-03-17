@@ -14,6 +14,9 @@
 @implementation MessageViewCell
 
 @synthesize titleLabel;
+@synthesize directionImage;
+@synthesize fromMeBox;
+@synthesize messageController;
 
 #pragma mark -
 #pragma mark Init/Dealloc

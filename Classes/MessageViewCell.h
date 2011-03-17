@@ -9,12 +9,19 @@
 #import <Cocoa/Cocoa.h>
 
 #import "PXListViewCell.h"
+#import "COMessage.h"
 
 @interface MessageViewCell : PXListViewCell
 {
 	NSTextField *titleLabel;
+    NSImageView *directionImage;
+    NSButton *fromMeBox;
+    NSObjectController *messageController;
 }
 
 @property (nonatomic, retain) IBOutlet NSTextField *titleLabel;
+@property (nonatomic, retain) IBOutlet NSImageView *directionImage;
+@property (nonatomic, retain) IBOutlet NSButton *fromMeBox;
+@property (nonatomic, retain) IBOutlet NSObjectController *messageController;
 
 @end
