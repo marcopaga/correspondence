@@ -8,10 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-
-@interface COConstants : NSObject {
-@private
-    
-}
-
-@end
+extern NSString* const ENTITY_ADDRESSBOOK_PERSON;
