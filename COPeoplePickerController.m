@@ -11,6 +11,8 @@
 
 @implementation COPeoplePickerController
 
+@synthesize customAddressHudControllers;
+
 #pragma mark Lifecycle
 
 - (id)init
@@ -18,6 +20,7 @@
     self = [super init];
     if (self) {
         [self registerForAddressBookNotifications];
+        customAddressHudControllers = [[NSMutableArray array] retain];
     }
     
     return self;
@@ -26,6 +29,10 @@
 - (void)dealloc
 {
     [self unregisterFromAddressBookNotifications];
+    if(customAddressHudControllers != nil){
+        [customAddressHudControllers release];
+        customAddressHudControllers = nil;
+    }
     [super dealloc];
 }
 
@@ -47,7 +54,6 @@
 
 -(void)addressBookChangedNotification:(NSNotification*)notification {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        NSDictionary* userInfo = [notification userInfo];
         NSArray* updatedRecords = [[notification userInfo] objectForKey:kABUpdatedRecords];
         NSArray* deletedRecords = [[notification userInfo] objectForKey:kABDeletedRecords];
         
@@ -100,6 +106,20 @@
     });
 }
 
+- (void) openAddressBook: (NSManagedObject *) receiver  {
+    NSString *uniqueId = [receiver uniqueId];
+    NSString *urlString = [NSString stringWithFormat:@"addressbook://%@?edit", uniqueId];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
+
+}
+
+- (void) openHudWindow: (NSManagedObject *) receiver  {
+    COCustomAddressHUDController *newController = [[COCustomAddressHUDController alloc] initWith:[receiver objectID]];
+    [customAddressHudControllers addObject:newController];
+    [newController showWindow:self];
+    [newController release];
+}
+
 - (void)handleDoubleClick:(NSArray*)selectedReceivers {
     assert(selectedReceivers != nil);
     if ([selectedReceivers count] == 0) {
@@ -109,18 +129,17 @@
     assert(firstSelectedReceiver != nil);
 
     if([[[firstSelectedReceiver entity] name] isEqualToString:ENTITY_ADDRESSBOOK_PERSON]){
-        NSString *uniqueId = [firstSelectedReceiver uniqueId];
-        NSString *urlString = [NSString
-                               stringWithFormat:@"addressbook://%@?edit", uniqueId];
-        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];  
+        [self openAddressBook: firstSelectedReceiver];
+  
     } else {
-        NSLog(@"Custom entity. Open HUD.");
+        [self openHudWindow: firstSelectedReceiver];
+
     }
 }
 
 #pragma mark Utilities
 
--(NSString*)nameFromRecord:(ABRecord*)record
+-(NSString*)nameFromRecord:(ABPerson*)record
 {
     NSString* firstName = [record valueForProperty:kABFirstNameProperty];
     NSString* lastName = [record valueForProperty:kABLastNameProperty];
@@ -133,7 +152,7 @@
 {
     NSManagedObjectContext *moc = [self sharedObjectContext];
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
     [fetchRequest setEntity: [NSEntityDescription entityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext: moc]];
     [fetchRequest setPredicate: [NSPredicate predicateWithFormat:@"uniqueId = %@",uniqueId]];
     
@@ -142,7 +161,7 @@
 
 -(NSManagedObjectContext*)sharedObjectContext
 {
-    return [[[NSApplication sharedApplication] delegate] managedObjectContext];
+    return [COSharedContext sharedObjectContext];
 }
 
 @end

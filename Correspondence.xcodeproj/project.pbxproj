@@ -16,12 +16,14 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		A94A34F21327D6D100D4F915 /* COPeoplePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */; };
 		A95D7BB713275BC10019DEEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFA8991323C4B900E42B00 /* AddressBook.framework */; };
+		A95F8E15134CD9B500C16004 /* COSharedContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A95F8E14134CD9B500C16004 /* COSharedContext.m */; };
 		A96D08EC1335120400093606 /* CustomAddress.xib in Resources */ = {isa = PBXBuildFile; fileRef = A96D08EB1335120400093606 /* CustomAddress.xib */; };
 		A974397B13351EDD00D4262D /* COConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A974397A13351EDD00D4262D /* COConstants.m */; };
 		A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CBB01318444200AAC978 /* Cocoa.framework */; };
 		A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB51318444200AAC978 /* InfoPlist.strings */; };
 		A975CBBA1318444200AAC978 /* UnitTests.h in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB91318444200AAC978 /* UnitTests.h */; };
 		A975CBBC1318444200AAC978 /* UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A975CBBB1318444200AAC978 /* UnitTests.m */; };
+		A9A5BA5C13364535001EDA12 /* COCustomAddressHUDController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */; };
 		A9AFA89C1323C4C900E42B00 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFA8991323C4B900E42B00 /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		8D1107320486CEB800E47090 /* Correspondence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Correspondence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94A34F01327D6D100D4F915 /* COPeoplePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPeoplePickerController.h; sourceTree = "<group>"; };
 		A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPeoplePickerController.m; sourceTree = "<group>"; };
+		A95F8E13134CD9B500C16004 /* COSharedContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSharedContext.h; sourceTree = "<group>"; };
+		A95F8E14134CD9B500C16004 /* COSharedContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSharedContext.m; sourceTree = "<group>"; };
 		A96D08EB1335120400093606 /* CustomAddress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAddress.xib; sourceTree = "<group>"; };
 		A974397913351EDD00D4262D /* COConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COConstants.h; sourceTree = "<group>"; };
 		A974397A13351EDD00D4262D /* COConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COConstants.m; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		A975CBB81318444200AAC978 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		A975CBB91318444200AAC978 /* UnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTests.h; sourceTree = "<group>"; };
 		A975CBBB1318444200AAC978 /* UnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTests.m; sourceTree = "<group>"; };
+		A9A5BA5A13364535001EDA12 /* COCustomAddressHUDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCustomAddressHUDController.h; sourceTree = "<group>"; };
+		A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCustomAddressHUDController.m; sourceTree = "<group>"; };
 		A9AFA8991323C4B900E42B00 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -87,6 +93,10 @@
 				A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */,
 				A974397913351EDD00D4262D /* COConstants.h */,
 				A974397A13351EDD00D4262D /* COConstants.m */,
+				A9A5BA5A13364535001EDA12 /* COCustomAddressHUDController.h */,
+				A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */,
+				A95F8E13134CD9B500C16004 /* COSharedContext.h */,
+				A95F8E14134CD9B500C16004 /* COSharedContext.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -314,6 +324,8 @@
 				2E2A5EC91326727700D7C5EE /* COMessage.m in Sources */,
 				A94A34F21327D6D100D4F915 /* COPeoplePickerController.m in Sources */,
 				A974397B13351EDD00D4262D /* COConstants.m in Sources */,
+				A9A5BA5C13364535001EDA12 /* COCustomAddressHUDController.m in Sources */,
+				A95F8E15134CD9B500C16004 /* COSharedContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
