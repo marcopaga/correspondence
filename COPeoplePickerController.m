@@ -11,6 +11,8 @@
 
 @implementation COPeoplePickerController
 
+#pragma mark Lifecycle
+
 - (id)init
 {
     self = [super init];
@@ -26,6 +28,8 @@
     [self unregisterFromAddressBookNotifications];
     [super dealloc];
 }
+
+#pragma mark Notifications
 
 -(void)registerForAddressBookNotifications
 {
@@ -70,6 +74,8 @@
     });
 }
 
+#pragma mark Event handling
+
 - (IBAction)addSelectedPerson:(id)sender {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSArray* selectedRecords = peoplePicker.selectedRecords;
@@ -94,6 +100,25 @@
     });
 }
 
+- (void)handleDoubleClick:(NSArray*)selectedReceivers {
+    assert(selectedReceivers != nil);
+    if ([selectedReceivers count] == 0) {
+        return;
+    }
+    NSManagedObject* firstSelectedReceiver = [selectedReceivers objectAtIndex:0];
+    assert(firstSelectedReceiver != nil);
+    // DoubleClick handling code here
+    NSLog(@"(DoubleClick) Receiver: %@", firstSelectedReceiver); // can be deleted
+    
+    //check for class to open correct editor
+    NSString *uniqueId = [firstSelectedReceiver uniqueId];
+    NSString *urlString = [NSString
+                           stringWithFormat:@"addressbook://%@?edit", uniqueId];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
+}
+
+#pragma mark Utilities
+
 -(NSString*)nameFromRecord:(ABRecord*)record
 {
     NSString* firstName = [record valueForProperty:kABFirstNameProperty];
@@ -112,23 +137,6 @@
     [fetchRequest setPredicate: [NSPredicate predicateWithFormat:@"uniqueId = %@",uniqueId]];
     
     return [[self sharedObjectContext] executeFetchRequest:fetchRequest error:nil];
-}
-
-- (void)handleDoubleClick:(NSArray*)selectedReceivers {
-    assert(selectedReceivers != nil);
-    if ([selectedReceivers count] == 0) {
-        return;
-    }
-    NSManagedObject* firstSelectedReceiver = [selectedReceivers objectAtIndex:0];
-    assert(firstSelectedReceiver != nil);
-    // DoubleClick handling code here
-    NSLog(@"(DoubleClick) Receiver: %@", firstSelectedReceiver); // can be deleted
-    
-    //check for class to open correct editor
-    NSString *uniqueId = [firstSelectedReceiver uniqueId];
-    NSString *urlString = [NSString
-                           stringWithFormat:@"addressbook://%@?edit", uniqueId];
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
 }
 
 -(NSManagedObjectContext*)sharedObjectContext
