@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AddressBook/AddressBook.h>
 #import <AddressBook/ABPeoplePickerView.h>
-
+#import "COConstants.h"
 
 @interface COPeoplePickerController : NSObject {
     IBOutlet ABPeoplePickerView *peoplePicker;

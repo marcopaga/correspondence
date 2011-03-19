@@ -47,6 +47,8 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		A94A34F21327D6D100D4F915 /* COPeoplePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */; };
 		A95D7BB713275BC10019DEEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFA8991323C4B900E42B00 /* AddressBook.framework */; };
+		A96D08EC1335120400093606 /* CustomAddress.xib in Resources */ = {isa = PBXBuildFile; fileRef = A96D08EB1335120400093606 /* CustomAddress.xib */; };
+		A974397B13351EDD00D4262D /* COConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A974397A13351EDD00D4262D /* COConstants.m */; };
 		A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CBB01318444200AAC978 /* Cocoa.framework */; };
 		A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB51318444200AAC978 /* InfoPlist.strings */; };
 		A975CBBA1318444200AAC978 /* UnitTests.h in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB91318444200AAC978 /* UnitTests.h */; };
@@ -98,6 +100,9 @@
 		8D1107320486CEB800E47090 /* Correspondence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Correspondence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94A34F01327D6D100D4F915 /* COPeoplePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPeoplePickerController.h; sourceTree = "<group>"; };
 		A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPeoplePickerController.m; sourceTree = "<group>"; };
+		A96D08EB1335120400093606 /* CustomAddress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAddress.xib; sourceTree = "<group>"; };
+		A974397913351EDD00D4262D /* COConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COConstants.h; sourceTree = "<group>"; };
+		A974397A13351EDD00D4262D /* COConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COConstants.m; sourceTree = "<group>"; };
 		A975CBAF1318444200AAC978 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A975CBB01318444200AAC978 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A975CBB41318444200AAC978 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -150,6 +155,8 @@
 				2E4DF47813316F2A0044C9D1 /* COListController.m */,
 				2EE6558713315D610039973A /* COListView.h */,
 				2EE6558813315D610039973A /* COListView.m */,
+				A974397913351EDD00D4262D /* COConstants.h */,
+				A974397A13351EDD00D4262D /* COConstants.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
 				2EBEC35D132D4FC000C84085 /* MessageViewCell.xib */,
 				2E3B31A1132EBC10002F8803 /* TopicViewCell.xib */,
+				A96D08EB1335120400093606 /* CustomAddress.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -377,6 +385,7 @@
 				2E3B31A2132EBC10002F8803 /* TopicViewCell.xib in Resources */,
 				2E4DF47E133285FF0044C9D1 /* up.png in Resources */,
 				2E4DF47F133285FF0044C9D1 /* down.png in Resources */,
+				A96D08EC1335120400093606 /* CustomAddress.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +444,7 @@
 				2E3B319F132EB88A002F8803 /* TopicViewCell.m in Sources */,
 				2EE6558913315D610039973A /* COListView.m in Sources */,
 				2E4DF47913316F2A0044C9D1 /* COListController.m in Sources */,
+				A974397B13351EDD00D4262D /* COConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

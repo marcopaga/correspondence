@@ -91,7 +91,7 @@
         assert(managedObjectContext != Nil);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSManagedObject* newEntity = [NSEntityDescription insertNewObjectForEntityForName:@"AddressbookPerson" inManagedObjectContext:managedObjectContext];
+            NSManagedObject* newEntity = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext:managedObjectContext];
             [newEntity setValue:[selectedPerson uniqueId] forKey:@"uniqueId"];
             [newEntity setValue:name forKey:@"name"];
             [managedObjectContext save:nil];
@@ -107,14 +107,15 @@
     }
     NSManagedObject* firstSelectedReceiver = [selectedReceivers objectAtIndex:0];
     assert(firstSelectedReceiver != nil);
-    // DoubleClick handling code here
-    NSLog(@"(DoubleClick) Receiver: %@", firstSelectedReceiver); // can be deleted
-    
-    //check for class to open correct editor
-    NSString *uniqueId = [firstSelectedReceiver uniqueId];
-    NSString *urlString = [NSString
-                           stringWithFormat:@"addressbook://%@?edit", uniqueId];
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
+
+    if([[[firstSelectedReceiver entity] name] isEqualToString:ENTITY_ADDRESSBOOK_PERSON]){
+        NSString *uniqueId = [firstSelectedReceiver uniqueId];
+        NSString *urlString = [NSString
+                               stringWithFormat:@"addressbook://%@?edit", uniqueId];
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];  
+    } else {
+        NSLog(@"Custom entity. Open HUD.");
+    }
 }
 
 #pragma mark Utilities
@@ -133,7 +134,7 @@
     NSManagedObjectContext *moc = [self sharedObjectContext];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    [fetchRequest setEntity: [NSEntityDescription entityForName:@"AddressbookPerson" inManagedObjectContext: moc]];
+    [fetchRequest setEntity: [NSEntityDescription entityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext: moc]];
     [fetchRequest setPredicate: [NSPredicate predicateWithFormat:@"uniqueId = %@",uniqueId]];
     
     return [[self sharedObjectContext] executeFetchRequest:fetchRequest error:nil];
