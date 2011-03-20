@@ -137,7 +137,13 @@
     [fetchRequest setEntity: [NSEntityDescription entityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext: moc]];
     [fetchRequest setPredicate: [NSPredicate predicateWithFormat:@"uniqueId = %@",uniqueId]];
     
-    return [[self sharedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    NSArray* result = [[self sharedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    if([result count] == 1){
+        return [result objectAtIndex:0];
+    } else {
+        //TODO: How to handle this?
+        return nil;
+    }
 }
 
 -(NSManagedObjectContext*)sharedObjectContext
