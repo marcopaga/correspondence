@@ -13,8 +13,10 @@
 @interface TopicViewCell : PXListViewCell
 {
 	NSTextField *titleLabel;
+    NSObjectController *topicController;
 }
 
 @property (nonatomic, retain) IBOutlet NSTextField *titleLabel;
+@property (nonatomic, retain) IBOutlet NSObjectController *topicController;
 
 @end

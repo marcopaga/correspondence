@@ -14,6 +14,7 @@
 @implementation TopicViewCell
 
 @synthesize titleLabel;
+@synthesize topicController;
 
 #pragma mark -
 #pragma mark Init/Dealloc

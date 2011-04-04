@@ -40,9 +40,14 @@
 		cell = [TopicViewCell cellLoadedFromNibNamed:@"TopicViewCell" reusableIdentifier:@"TopicViewCell"];
 	}
     
+    NSManagedObject *topic = [[self arrangedObjects] objectAtIndex:row];
+    [[cell topicController] setContent:topic];
+    
+    /*
     NSString* text = [[[self arrangedObjects] objectAtIndex:row] valueForKey:@"name"];
 	
 	[[cell titleLabel] setStringValue:text];
+     */
 	
 	return cell;
 }
