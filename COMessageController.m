@@ -76,4 +76,18 @@
 	return 50;
 }
 
+// Change the MessageDetailView
+
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
+    [listView reloadData];
+}
+
+- (void)listViewSelectionDidChange:(NSNotification*)aNotification {
+    PXListView *aListView = [aNotification object];
+    NSIndexSet *selectedRows = [aListView selectedRows];
+    // select items in arraycontroll
+    [self setSelectionIndexes:selectedRows];
+
+}
+
 @end
