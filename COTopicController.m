@@ -11,21 +11,6 @@
 
 @implementation COTopicController
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
-- (void)dealloc
-{
-    [super dealloc];
-}
-
 - (NSUInteger)numberOfRowsInListView: (PXListView*)aListView
 {
 #pragma unused(aListView)
@@ -34,10 +19,10 @@
 
 - (PXListViewCell*)listView:(PXListView*)aListView cellForRow:(NSUInteger)row
 {
-	TopicViewCell *cell = (TopicViewCell*)[aListView dequeueCellWithReusableIdentifier:@"TopicViewCell"];
+	COTopicViewCell *cell = (COTopicViewCell*)[aListView dequeueCellWithReusableIdentifier:@"TopicViewCell"];
 	
 	if(!cell) {
-		cell = [TopicViewCell cellLoadedFromNibNamed:@"TopicViewCell" reusableIdentifier:@"TopicViewCell"];
+		cell = [COTopicViewCell cellLoadedFromNibNamed:@"TopicViewCell" reusableIdentifier:@"TopicViewCell"];
 	}
     
     NSManagedObject *topic = [[self arrangedObjects] objectAtIndex:row];

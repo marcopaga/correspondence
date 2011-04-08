@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "COViewCell.h"
 
-@interface TopicViewCell : COViewCell
+@interface COTopicViewCell : COViewCell
 {
 }
 

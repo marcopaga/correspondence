@@ -6,8 +6,8 @@
 //  Copyright 2011 The Correspondence Team. All rights reserved.
 //
 
-#import "TopicViewCell.h"
+#import "COTopicViewCell.h"
 
-@implementation TopicViewCell
+@implementation COTopicViewCell
 
 @end

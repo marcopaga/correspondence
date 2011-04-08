@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "COListController.h"
-#import "MessageViewCell.h"
+#import "COMessageViewCell.h"
 #import "COMessage.h"
 
 

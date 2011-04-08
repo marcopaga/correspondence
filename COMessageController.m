@@ -11,21 +11,6 @@
 
 @implementation COMessageController
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
-- (void)dealloc
-{
-    [super dealloc];
-}
-
 - (void)awakeFromNib
 {
 	[listView setCellSpacing:2.0f];
@@ -42,10 +27,10 @@
 
 - (PXListViewCell*)listView:(PXListView*)aListView cellForRow:(NSUInteger)row
 {
-	MessageViewCell *cell = (MessageViewCell*)[aListView dequeueCellWithReusableIdentifier:@"MessageViewCell"];
+	COMessageViewCell *cell = (COMessageViewCell*)[aListView dequeueCellWithReusableIdentifier:@"MessageViewCell"];
 	
 	if(!cell) {
-		cell = [MessageViewCell cellLoadedFromNibNamed:@"MessageViewCell" reusableIdentifier:@"MessageViewCell"];
+		cell = [COMessageViewCell cellLoadedFromNibNamed:@"MessageViewCell" reusableIdentifier:@"MessageViewCell"];
 	}
     
     COMessage *message = [[self arrangedObjects] objectAtIndex:row];

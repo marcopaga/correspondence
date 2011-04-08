@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "COListController.h"
-#import "TopicViewCell.h"
+#import "COTopicViewCell.h"
 
 @interface COTopicController : COListController {
 
