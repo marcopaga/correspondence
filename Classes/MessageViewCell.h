@@ -1,27 +1,16 @@
 //
 //  MessageViewCell.h
-//  PXListView
+//  Correspondence
 //
-//  Created by Alex Rozanski on 29/05/2010.
-//  Copyright 2010 Alex Rozanski. http://perspx.com. All rights reserved.
+//  Created by Robert Retzbach on 08.04.11.
+//  Copyright 2011 The Correspondence Team. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
+#import "COViewCell.h"
 
-#import "PXListViewCell.h"
-#import "COMessage.h"
-
-@interface MessageViewCell : PXListViewCell
+@interface MessageViewCell : COViewCell
 {
-	NSTextField *titleLabel;
-    NSImageView *directionImage;
-    NSButton *fromMeBox;
-    NSObjectController *messageController;
 }
-
-@property (nonatomic, retain) IBOutlet NSTextField *titleLabel;
-@property (nonatomic, retain) IBOutlet NSImageView *directionImage;
-@property (nonatomic, retain) IBOutlet NSButton *fromMeBox;
-@property (nonatomic, retain) IBOutlet NSObjectController *messageController;
 
 @end

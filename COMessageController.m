@@ -49,25 +49,8 @@
 	}
     
     COMessage *message = [[self arrangedObjects] objectAtIndex:row];
-    
-    // TODO: only set message to cell and let the cell handle the bindings
-    [[cell messageController] setContent:message];
-    
-    NSString *text = [message valueForKey:@"subjectLine"];
-	[[cell titleLabel] setStringValue:text];
-    
-//    NSButton *box = [cell fromMeBox];
-    NSImage *image;
-    NSNumber *b = [message fromMe];
-    if ([b intValue] == 1) {
-//        [box setState:NSOnState];
-        image = [NSImage imageNamed:@"up"];
-    } else {
-//        [box setState:NSOffState];
-        image = [NSImage imageNamed:@"down"];
-    }
-    [[cell directionImage] setImage:image];
-	
+    [[cell objectController] setContent:message];
+    	
 	return cell;
 }
 
