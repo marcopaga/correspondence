@@ -73,7 +73,7 @@
 		2E3B3196132EA8FB002F8803 /* COMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COMessageController.m; sourceTree = "<group>"; };
 		2E3B3199132EB5CA002F8803 /* COTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COTopicController.h; sourceTree = "<group>"; };
 		2E3B319A132EB5CA002F8803 /* COTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTopicController.m; sourceTree = "<group>"; };
-		2E3B319D132EB88A002F8803 /* COTopicViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; name = COTopicViewCell.h; path = Classes/COTopicViewCell.h; sourceTree = "<group>"; };
+		2E3B319D132EB88A002F8803 /* COTopicViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COTopicViewCell.h; path = Classes/COTopicViewCell.h; sourceTree = "<group>"; };
 		2E3B319E132EB88A002F8803 /* COTopicViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COTopicViewCell.m; path = Classes/COTopicViewCell.m; sourceTree = "<group>"; };
 		2E3B31A1132EBC10002F8803 /* TopicViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopicViewCell.xib; path = Resources/TopicViewCell.xib; sourceTree = "<group>"; };
 		2E3FBA0A134F9B8500DB95B2 /* COViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COViewCell.h; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		2EBEC341132BC65000C84085 /* PXListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXListViewCell.m; path = PXListView/PXListViewCell.m; sourceTree = "<group>"; };
 		2EBEC342132BC65000C84085 /* PXListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewDelegate.h; sourceTree = "<group>"; };
 		2EBEC343132BC65000C84085 /* PXListViewDropHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXListViewDropHighlight.h; path = PXListView/PXListViewDropHighlight.h; sourceTree = "<group>"; };
-		2EBEC359132D4E3F00C84085 /* COMessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; name = COMessageViewCell.h; path = Classes/COMessageViewCell.h; sourceTree = "<group>"; };
+		2EBEC359132D4E3F00C84085 /* COMessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COMessageViewCell.h; path = Classes/COMessageViewCell.h; sourceTree = "<group>"; };
 		2EBEC35A132D4E3F00C84085 /* COMessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COMessageViewCell.m; path = Classes/COMessageViewCell.m; sourceTree = "<group>"; };
 		2EBEC35D132D4FC000C84085 /* MessageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageViewCell.xib; path = Resources/MessageViewCell.xib; sourceTree = "<group>"; };
 		2EE6558713315D610039973A /* COListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COListView.h; sourceTree = "<group>"; };
@@ -142,25 +142,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2E3FBA0A134F9B8500DB95B2 /* COViewCell.h */,
-				2E3FBA0B134F9B8500DB95B2 /* COViewCell.m */,
-				2E3B319D132EB88A002F8803 /* COTopicViewCell.h */,
-				2E3B319E132EB88A002F8803 /* COTopicViewCell.m */,
-				2EBEC359132D4E3F00C84085 /* COMessageViewCell.h */,
-				2EBEC35A132D4E3F00C84085 /* COMessageViewCell.m */,
+				2E3FBA0F134FA26900DB95B2 /* COListViews */,
 				2EBEC339132BC65000C84085 /* PXListView */,
 				2E256C2A131876A200AE7F9E /* COAppDelegate.h */,
 				2E256C2B131876A200AE7F9E /* COAppDelegate.m */,
 				A94A34F01327D6D100D4F915 /* COPeoplePickerController.h */,
 				A94A34F11327D6D100D4F915 /* COPeoplePickerController.m */,
-				2E3B3195132EA8FB002F8803 /* COMessageController.h */,
-				2E3B3196132EA8FB002F8803 /* COMessageController.m */,
-				2E3B3199132EB5CA002F8803 /* COTopicController.h */,
-				2E3B319A132EB5CA002F8803 /* COTopicController.m */,
-				2E4DF47713316F2A0044C9D1 /* COListController.h */,
-				2E4DF47813316F2A0044C9D1 /* COListController.m */,
-				2EE6558713315D610039973A /* COListView.h */,
-				2EE6558813315D610039973A /* COListView.m */,
 				A974397913351EDD00D4262D /* COConstants.h */,
 				A974397A13351EDD00D4262D /* COConstants.m */,
 			);
@@ -242,6 +229,27 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E3FBA0F134FA26900DB95B2 /* COListViews */ = {
+			isa = PBXGroup;
+			children = (
+				2E3FBA0A134F9B8500DB95B2 /* COViewCell.h */,
+				2E3FBA0B134F9B8500DB95B2 /* COViewCell.m */,
+				2E3B319D132EB88A002F8803 /* COTopicViewCell.h */,
+				2E3B319E132EB88A002F8803 /* COTopicViewCell.m */,
+				2EBEC359132D4E3F00C84085 /* COMessageViewCell.h */,
+				2EBEC35A132D4E3F00C84085 /* COMessageViewCell.m */,
+				2E3B3195132EA8FB002F8803 /* COMessageController.h */,
+				2E3B3196132EA8FB002F8803 /* COMessageController.m */,
+				2E3B3199132EB5CA002F8803 /* COTopicController.h */,
+				2E3B319A132EB5CA002F8803 /* COTopicController.m */,
+				2E4DF47713316F2A0044C9D1 /* COListController.h */,
+				2E4DF47813316F2A0044C9D1 /* COListController.m */,
+				2EE6558713315D610039973A /* COListView.h */,
+				2EE6558813315D610039973A /* COListView.m */,
+			);
+			name = COListViews;
 			sourceTree = "<group>";
 		};
 		2EBEC337132BC3EF00C84085 /* Cells */ = {

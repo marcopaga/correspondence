@@ -13,47 +13,16 @@
 
 - (void)awakeFromNib
 {
-	[listView setCellSpacing:2.0f];
-	[listView setAllowsEmptySelection:YES];
-	[listView setAllowsMultipleSelection:YES];	
-	[listView reloadData];
-}
-
-- (NSUInteger)numberOfRowsInListView: (PXListView*)aListView
-{
-#pragma unused(aListView)
-	return [[self arrangedObjects] count];
-}
-
-- (PXListViewCell*)listView:(PXListView*)aListView cellForRow:(NSUInteger)row
-{
-	COMessageViewCell *cell = (COMessageViewCell*)[aListView dequeueCellWithReusableIdentifier:@"MessageViewCell"];
-	
-	if(!cell) {
-		cell = [COMessageViewCell cellLoadedFromNibNamed:@"MessageViewCell" reusableIdentifier:@"MessageViewCell"];
-	}
-    
-    COMessage *message = [[self arrangedObjects] objectAtIndex:row];
-    [[cell objectController] setContent:message];
-    	
-	return cell;
-}
-
-- (CGFloat)listView:(PXListView*)aListView heightOfRow:(NSUInteger)row
-{
-	return 50;
+    [super awakeFromNib];
+    nibName = [NSString stringWithString:@"MessageViewCell"];
 }
 
 // Change the MessageDetailView
 
-- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    [listView reloadData];
-}
-
 - (void)listViewSelectionDidChange:(NSNotification*)aNotification {
     PXListView *aListView = [aNotification object];
     NSIndexSet *selectedRows = [aListView selectedRows];
-    // select items in arraycontroll
+    // select items in arraycontroller
     [self setSelectionIndexes:selectedRows];
 
 }

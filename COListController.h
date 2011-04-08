@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "PXListView.h"
+#import "COViewCell.h"
 
 @interface COListController : NSArrayController<PXListViewDelegate> {
 
     IBOutlet PXListView	*listView;
+    NSString *nibName;
     
 }
+
+@property (nonatomic, retain) NSString *nibName;
 
 @end

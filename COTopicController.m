@@ -11,34 +11,10 @@
 
 @implementation COTopicController
 
-- (NSUInteger)numberOfRowsInListView: (PXListView*)aListView
+- (void)awakeFromNib
 {
-#pragma unused(aListView)
-	return [[self arrangedObjects] count];
-}
-
-- (PXListViewCell*)listView:(PXListView*)aListView cellForRow:(NSUInteger)row
-{
-	COTopicViewCell *cell = (COTopicViewCell*)[aListView dequeueCellWithReusableIdentifier:@"TopicViewCell"];
-	
-	if(!cell) {
-		cell = [COTopicViewCell cellLoadedFromNibNamed:@"TopicViewCell" reusableIdentifier:@"TopicViewCell"];
-	}
-    
-    NSManagedObject *topic = [[self arrangedObjects] objectAtIndex:row];
-    [[cell objectController] setContent:topic];
-	
-	return cell;
-}
-
-- (CGFloat)listView:(PXListView*)aListView heightOfRow:(NSUInteger)row
-{
-	return 50;
-}
-
-// Topics are shown for a selected Receiver
-- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    [listView reloadData];
+    [super awakeFromNib];
+    nibName = [NSString stringWithString:@"TopicViewCell"];
 }
 
 - (void)listViewSelectionDidChange:(NSNotification*)aNotification {

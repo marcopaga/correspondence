@@ -11,18 +11,11 @@
 
 @implementation COListController
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
+@synthesize nibName;
 
 - (void)dealloc
 {
+    [nibName dealloc];
     [super dealloc];
 }
 
@@ -44,6 +37,30 @@
 {
     [super remove:sender];
     [listView reloadData];
+}
+
+- (NSUInteger)numberOfRowsInListView: (PXListView*)aListView
+{
+	return [[self arrangedObjects] count];
+}
+
+- (CGFloat)listView:(PXListView*)aListView heightOfRow:(NSUInteger)row
+{
+	return 50;
+}
+
+- (PXListViewCell*)listView:(PXListView*)aListView cellForRow:(NSUInteger)row
+{
+	COViewCell *cell = (COViewCell*)[aListView dequeueCellWithReusableIdentifier:nibName];
+	
+	if(!cell) {
+		cell = [COViewCell cellLoadedFromNibNamed:nibName reusableIdentifier:nibName];
+	}
+    
+    NSManagedObject *entity = [[self arrangedObjects] objectAtIndex:row];
+    [[cell objectController] setContent:entity];
+	
+	return cell;
 }
 
 @end
