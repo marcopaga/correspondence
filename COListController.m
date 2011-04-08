@@ -51,10 +51,10 @@
 
 - (PXListViewCell*)listView:(PXListView*)aListView cellForRow:(NSUInteger)row
 {
-	COViewCell *cell = (COViewCell*)[aListView dequeueCellWithReusableIdentifier:nibName];
+	COManagedViewCell *cell = (COManagedViewCell*)[aListView dequeueCellWithReusableIdentifier:nibName];
 	
 	if(!cell) {
-		cell = [COViewCell cellLoadedFromNibNamed:nibName reusableIdentifier:nibName];
+		cell = [COManagedViewCell cellLoadedFromNibNamed:nibName reusableIdentifier:nibName];
 	}
     
     NSManagedObject *entity = [[self arrangedObjects] objectAtIndex:row];

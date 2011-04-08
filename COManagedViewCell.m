@@ -1,5 +1,5 @@
 //
-//  COViewCell.m
+//  COManagedViewCell.m
 //  Correspondence
 //
 //  Created by Robert Retzbach on 08.04.11.
@@ -13,10 +13,10 @@
 //  Copyright 2010 Alex Rozanski. http://perspx.com. All rights reserved.
 //
 
-#import "COViewCell.h"
+#import "COManagedViewCell.h"
 
 
-@implementation COViewCell
+@implementation COManagedViewCell
 
 @synthesize objectController;
 
@@ -29,7 +29,7 @@
 		[[NSColor whiteColor] set];
     }
     
-    //Draw the border and background
+    // Draw the border and background
 	NSBezierPath *roundedRect = [NSBezierPath bezierPathWithRoundedRect:[self bounds] xRadius:6.0 yRadius:6.0];
 	[roundedRect fill];
 }

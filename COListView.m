@@ -11,21 +11,6 @@
 
 @implementation COListView
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
-- (void)dealloc
-{
-    [super dealloc];
-}
-
 - (void)awakeFromNib
 {
     [_delegate addObserver:self forKeyPath:@"content" options:0 context:nil];

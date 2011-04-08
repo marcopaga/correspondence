@@ -1,5 +1,5 @@
 //
-//  COViewCell.h
+//  COManagedViewCell.h
 //  Correspondence
 //
 //  Created by Robert Retzbach on 08.04.11.
@@ -16,7 +16,11 @@
 #import <Foundation/Foundation.h>
 #import "PXListViewCell.h"
 
-@interface COViewCell : PXListViewCell {
+/**
+ *  Representation of a single entry of a PXListView. Each list view entry uses an object
+ *  controller bound to an NSManagedObject entity. All ui items are bound to the objectController in their xib file.
+ */
+@interface COManagedViewCell : PXListViewCell {
   NSObjectController *objectController;
 }
 

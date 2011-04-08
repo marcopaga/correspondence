@@ -7,9 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "COViewCell.h"
+#import "COManagedViewCell.h"
 
-@interface COTopicViewCell : COViewCell
+@interface COTopicViewCell : COManagedViewCell
 {
 }
 

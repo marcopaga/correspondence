@@ -18,8 +18,8 @@
 		2E3B31A0132EB88A002F8803 /* COTopicViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3B319E132EB88A002F8803 /* COTopicViewCell.m */; };
 		2E3B31A2132EBC10002F8803 /* TopicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3B31A1132EBC10002F8803 /* TopicViewCell.xib */; };
 		2E3B31A3132EBC10002F8803 /* TopicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3B31A1132EBC10002F8803 /* TopicViewCell.xib */; };
-		2E3FBA0C134F9B8500DB95B2 /* COViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3FBA0B134F9B8500DB95B2 /* COViewCell.m */; };
-		2E3FBA0D134F9B8500DB95B2 /* COViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3FBA0B134F9B8500DB95B2 /* COViewCell.m */; };
+		2E3FBA0C134F9B8500DB95B2 /* COManagedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3FBA0B134F9B8500DB95B2 /* COManagedViewCell.m */; };
+		2E3FBA0D134F9B8500DB95B2 /* COManagedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3FBA0B134F9B8500DB95B2 /* COManagedViewCell.m */; };
 		2E4DF47913316F2A0044C9D1 /* COListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4DF47813316F2A0044C9D1 /* COListController.m */; };
 		2E4DF47A13316F2A0044C9D1 /* COListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4DF47813316F2A0044C9D1 /* COListController.m */; };
 		2E4DF47E133285FF0044C9D1 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4DF47C133285FF0044C9D1 /* up.png */; };
@@ -76,8 +76,8 @@
 		2E3B319D132EB88A002F8803 /* COTopicViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COTopicViewCell.h; path = Classes/COTopicViewCell.h; sourceTree = "<group>"; };
 		2E3B319E132EB88A002F8803 /* COTopicViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COTopicViewCell.m; path = Classes/COTopicViewCell.m; sourceTree = "<group>"; };
 		2E3B31A1132EBC10002F8803 /* TopicViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopicViewCell.xib; path = Resources/TopicViewCell.xib; sourceTree = "<group>"; };
-		2E3FBA0A134F9B8500DB95B2 /* COViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COViewCell.h; sourceTree = "<group>"; };
-		2E3FBA0B134F9B8500DB95B2 /* COViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COViewCell.m; sourceTree = "<group>"; };
+		2E3FBA0A134F9B8500DB95B2 /* COManagedViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; path = COManagedViewCell.h; sourceTree = "<group>"; };
+		2E3FBA0B134F9B8500DB95B2 /* COManagedViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COManagedViewCell.m; sourceTree = "<group>"; };
 		2E4DF47713316F2A0044C9D1 /* COListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COListController.h; sourceTree = "<group>"; };
 		2E4DF47813316F2A0044C9D1 /* COListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COListController.m; sourceTree = "<group>"; };
 		2E4DF47C133285FF0044C9D1 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = up.png; path = Resources/Icons/up.png; sourceTree = "<group>"; };
@@ -234,8 +234,8 @@
 		2E3FBA0F134FA26900DB95B2 /* COListViews */ = {
 			isa = PBXGroup;
 			children = (
-				2E3FBA0A134F9B8500DB95B2 /* COViewCell.h */,
-				2E3FBA0B134F9B8500DB95B2 /* COViewCell.m */,
+				2E3FBA0A134F9B8500DB95B2 /* COManagedViewCell.h */,
+				2E3FBA0B134F9B8500DB95B2 /* COManagedViewCell.m */,
 				2E3B319D132EB88A002F8803 /* COTopicViewCell.h */,
 				2E3B319E132EB88A002F8803 /* COTopicViewCell.m */,
 				2EBEC359132D4E3F00C84085 /* COMessageViewCell.h */,
@@ -459,7 +459,7 @@
 				2EE6558913315D610039973A /* COListView.m in Sources */,
 				2E4DF47913316F2A0044C9D1 /* COListController.m in Sources */,
 				A974397B13351EDD00D4262D /* COConstants.m in Sources */,
-				2E3FBA0C134F9B8500DB95B2 /* COViewCell.m in Sources */,
+				2E3FBA0C134F9B8500DB95B2 /* COManagedViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +477,7 @@
 				2E3B31A0132EB88A002F8803 /* COTopicViewCell.m in Sources */,
 				2EE6558A13315D610039973A /* COListView.m in Sources */,
 				2E4DF47A13316F2A0044C9D1 /* COListController.m in Sources */,
-				2E3FBA0D134F9B8500DB95B2 /* COViewCell.m in Sources */,
+				2E3FBA0D134F9B8500DB95B2 /* COManagedViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

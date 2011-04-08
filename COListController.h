@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "PXListView.h"
-#import "COViewCell.h"
+#import "COManagedViewCell.h"
 
+/**
+ *  This NSArrayController controls a list of list view entries for a single PXListView.
+ *  Each list view entry is represented by a xib refrenced by nibName.
+ */
 @interface COListController : NSArrayController<PXListViewDelegate> {
 
     IBOutlet PXListView	*listView;
