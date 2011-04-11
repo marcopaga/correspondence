@@ -21,3 +21,6 @@ build/
 
 xcuserdata/
 xcuserdata/*
+
+Jetbrains appCode
+.idea/*

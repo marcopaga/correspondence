@@ -9,3 +9,6 @@
 #import "COConstants.h"
 
 NSString* const ENTITY_ADDRESSBOOK_PERSON = @"AddressbookPerson";
+NSString* const ENTITY_PERSON = @"Person";
+
+NSString* const NIB_CUSTOM_ADDRESS = @"CustomAddress";
