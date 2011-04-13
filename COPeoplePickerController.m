@@ -164,4 +164,13 @@
     return [COSharedContext sharedObjectContext];
 }
 
+- (IBAction)addPerson:(id)sender
+{
+        NSManagedObjectContext *moc = [self sharedObjectContext];
+        NSManagedObject* newEntity = [NSEntityDescription insertNewObjectForEntityForName:
+                                      ENTITY_PERSON inManagedObjectContext:moc];
+        [newEntity setValue:@"Unnamed" forKey:@"name"];
+        [[self moc] save:nil];
+}
+
 @end

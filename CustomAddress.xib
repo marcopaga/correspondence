@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
 		<string key="IBDocument.SystemVersion">10J869</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">1306</string>
+			<string key="NS.object.0">1305</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSTextField</string>
@@ -210,7 +210,7 @@
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="894992341"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1366, 746}}</string>
 				<string key="NSMinSize">{347, 241}</string>
 				<string key="NSMaxSize">{347, 241}</string>
 			</object>
@@ -291,6 +291,86 @@
 						</object>
 					</object>
 					<int key="connectionID">84</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: entity.street</string>
+						<reference key="source" ref="32997975"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="32997975"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: entity.street</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">entity.street</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">101</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: entity.postalCode</string>
+						<reference key="source" ref="661606939"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="661606939"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: entity.postalCode</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">entity.postalCode</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">105</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: entity.city</string>
+						<reference key="source" ref="62405546"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="62405546"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: entity.city</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">entity.city</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">108</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: entity.email</string>
+						<reference key="source" ref="399714507"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="399714507"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: entity.email</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">entity.email</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">113</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: entity.phoneNumber</string>
+						<reference key="source" ref="597688138"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="597688138"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: entity.phoneNumber</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">entity.phoneNumber</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">117</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -468,7 +548,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">97</int>
+			<int key="maxID">117</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

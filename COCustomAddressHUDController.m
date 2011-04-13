@@ -34,24 +34,10 @@
 }
 
 - (IBAction)okButton:(id)sender {
-    [entity setValue:@"test" forKey:@"street"];
     [[COSharedContext sharedObjectContext] save:nil];
 }
 
 -(NSManagedObject*)loadEntityFor:(NSString *)objectId{
-    /*
-    NSManagedObjectContext *moc = [COSharedContext sharedObjectContext];
-    
-    NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
-    [fetchRequest setEntity: [NSEntityDescription entityForName:ENTITY_PERSON
-                                         inManagedObjectContext: moc]];
-    [fetchRequest setPredicate: [NSPredicate predicateWithFormat:@"objectID = %@",objectId]];
-    
-    NSArray* result =  [[COSharedContext sharedObjectContext] executeFetchRequest:fetchRequest error:nil];
-    assert([result count] == 1);
-    return [result objectAtIndex:0];
-     */
-    NSLog(@"Load by id: %@", objectId);
     return [[COSharedContext sharedObjectContext] objectWithID:objectId];
 }
 
