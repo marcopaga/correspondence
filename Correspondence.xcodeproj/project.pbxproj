@@ -54,6 +54,9 @@
 		A975CBBA1318444200AAC978 /* UnitTests.h in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB91318444200AAC978 /* UnitTests.h */; };
 		A975CBBC1318444200AAC978 /* UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A975CBBB1318444200AAC978 /* UnitTests.m */; };
 		A9AFA89C1323C4C900E42B00 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFA8991323C4B900E42B00 /* AddressBook.framework */; };
+		A9CB4BAE13572917009A166C /* COReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4BAD13572917009A166C /* COReceiver.m */; };
+		A9CB4BB113572918009A166C /* COAddressbookPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4BB013572918009A166C /* COAddressbookPerson.m */; };
+		A9CB4BB413572918009A166C /* COPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4BB313572918009A166C /* COPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +118,12 @@
 		A9A5BA5A13364535001EDA12 /* COCustomAddressHUDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCustomAddressHUDController.h; sourceTree = "<group>"; };
 		A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCustomAddressHUDController.m; sourceTree = "<group>"; };
 		A9AFA8991323C4B900E42B00 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		A9CB4BAC13572917009A166C /* COReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; path = COReceiver.h; sourceTree = "<group>"; };
+		A9CB4BAD13572917009A166C /* COReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COReceiver.m; sourceTree = "<group>"; };
+		A9CB4BAF13572918009A166C /* COAddressbookPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; path = COAddressbookPerson.h; sourceTree = "<group>"; };
+		A9CB4BB013572918009A166C /* COAddressbookPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COAddressbookPerson.m; sourceTree = "<group>"; };
+		A9CB4BB213572918009A166C /* COPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; path = COPerson.h; sourceTree = "<group>"; };
+		A9CB4BB313572918009A166C /* COPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +311,12 @@
 			children = (
 				2E2A5EC71326727700D7C5EE /* COMessage.h */,
 				2E2A5EC81326727700D7C5EE /* COMessage.m */,
+				A9CB4BB213572918009A166C /* COPerson.h */,
+				A9CB4BB313572918009A166C /* COPerson.m */,
+				A9CB4BAF13572918009A166C /* COAddressbookPerson.h */,
+				A9CB4BB013572918009A166C /* COAddressbookPerson.m */,
+				A9CB4BAC13572917009A166C /* COReceiver.h */,
+				A9CB4BAD13572917009A166C /* COReceiver.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -460,6 +475,9 @@
 				2E4DF47913316F2A0044C9D1 /* COListController.m in Sources */,
 				A974397B13351EDD00D4262D /* COConstants.m in Sources */,
 				2E3FBA0C134F9B8500DB95B2 /* COManagedViewCell.m in Sources */,
+				A9CB4BAE13572917009A166C /* COReceiver.m in Sources */,
+				A9CB4BB113572918009A166C /* COAddressbookPerson.m in Sources */,
+				A9CB4BB413572918009A166C /* COPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
