@@ -23,16 +23,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (void)windowDidLoad
-{
-    [super windowDidLoad];
-}
-
 - (IBAction)okButton:(id)sender {
     [[COSharedContext sharedObjectContext] save:nil];
 }
