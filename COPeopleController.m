@@ -6,10 +6,10 @@
 //  Copyright 2011 The Correspondence Team. All rights reserved.
 //
 
-#import "COPeoplePickerController.h"
+#import "COPeopleController.h"
 
 
-@implementation COPeoplePickerController
+@implementation COPeopleController
 
 @synthesize customAddressHudControllers;
 

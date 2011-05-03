@@ -13,7 +13,7 @@
 #import "COCustomAddressHUDController.h"
 #import "COSharedContext.h"
 
-@interface COPeoplePickerController : NSObject {
+@interface COPeopleController : NSObject {
     IBOutlet ABPeoplePickerView *peoplePicker;
     NSMutableArray *customAddressHudControllers;
 }
