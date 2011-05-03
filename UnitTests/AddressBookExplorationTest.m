@@ -5,10 +5,10 @@
 //  Copyright (c) 2011 The Correspondence Team. All rights reserved.
 //
 
-#import "UnitTests.h"
+#import "AddressBookExplorationTest.h"
 
 
-@implementation UnitTests
+@implementation AddressBookExplorationTest
 
 - (void)setUp
 {

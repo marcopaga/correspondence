@@ -9,7 +9,7 @@
 #import <AddressBook/AddressBook.h>
 
 
-@interface UnitTests : SenTestCase {
+@interface AddressBookExplorationTest : SenTestCase {
 @private
     ABRecord* testRecord;
     NSString* uniqueId;
