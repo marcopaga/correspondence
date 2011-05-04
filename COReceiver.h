@@ -16,4 +16,6 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet* topics;
 
+- (NSArray*) createAddressStrings;
+
 @end
