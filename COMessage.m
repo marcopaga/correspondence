@@ -15,6 +15,7 @@
 @dynamic fromMe;
 @dynamic date;
 @dynamic topic;
+@dynamic parent;
 
 - (void)awakeFromInsert{
     [super awakeFromInsert];
@@ -113,6 +114,27 @@
 }
 
 - (BOOL)validateTopic:(id *)valueRef error:(NSError **)outError {
+    // Insert custom validation logic here.
+    return YES;
+}
+
+- (NSManagedObject *)parent {
+    id tmpObject;
+    
+    [self willAccessValueForKey:@"parent"];
+    tmpObject = [self primitiveTopic];
+    [self didAccessValueForKey:@"parent"];
+    
+    return tmpObject;
+}
+
+- (void)setParent:(NSManagedObject *)value {
+    [self willChangeValueForKey:@"parent"];
+    [self setPrimitiveTopic:value];
+    [self didChangeValueForKey:@"parent"];
+}
+
+- (BOOL)validateParent:(id *)valueRef error:(NSError **)outError {
     // Insert custom validation logic here.
     return YES;
 }

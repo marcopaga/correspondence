@@ -39,6 +39,8 @@
 		2EBEC35C132D4E4000C84085 /* COMessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC35A132D4E3F00C84085 /* COMessageViewCell.m */; };
 		2EE6558913315D610039973A /* COListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6558813315D610039973A /* COListView.m */; };
 		2EE6558A13315D610039973A /* COListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6558813315D610039973A /* COListView.m */; };
+		2EE7C97F1371C3E300F1D146 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE7C97E1371C3E300F1D146 /* reply.png */; };
+		2EE7C9801371C3E300F1D146 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE7C97E1371C3E300F1D146 /* reply.png */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -103,11 +105,12 @@
 		2EBEC35A132D4E3F00C84085 /* COMessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COMessageViewCell.m; path = Classes/COMessageViewCell.m; sourceTree = "<group>"; };
 		2EE6558713315D610039973A /* COListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COListView.h; sourceTree = "<group>"; };
 		2EE6558813315D610039973A /* COListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COListView.m; sourceTree = "<group>"; };
+		2EE7C97E1371C3E300F1D146 /* reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reply.png; path = Resources/Icons/reply.png; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Correspondence_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Correspondence_Prefix.pch; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Correspondence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Correspondence.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A94A34F01327D6D100D4F915 /* COPeopleController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = COPeopleController.h; sourceTree = "<group>"; };
+		A94A34F01327D6D100D4F915 /* COPeopleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPeopleController.h; sourceTree = "<group>"; };
 		A94A34F11327D6D100D4F915 /* COPeopleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPeopleController.m; sourceTree = "<group>"; };
 		A95F8E13134CD9B500C16004 /* COSharedContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSharedContext.h; sourceTree = "<group>"; };
 		A95F8E14134CD9B500C16004 /* COSharedContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSharedContext.m; sourceTree = "<group>"; };
@@ -239,6 +242,7 @@
 				A9CB4BB713572E18009A166C /* TopicViewCell.xib */,
 				2E4DF47C133285FF0044C9D1 /* up.png */,
 				2E4DF47D133285FF0044C9D1 /* down.png */,
+				2EE7C97E1371C3E300F1D146 /* reply.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -432,6 +436,7 @@
 				A9CB4BB913572E18009A166C /* TopicViewCell.xib in Resources */,
 				A9CB4BBB13572E60009A166C /* CustomAddress.xib in Resources */,
 				A9CB4BBD13572E85009A166C /* MainMenu.xib in Resources */,
+				2EE7C97F1371C3E300F1D146 /* reply.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +446,7 @@
 			files = (
 				A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */,
 				A975CBBA1318444200AAC978 /* AddressBookExplorationTest.h in Resources */,
+				2EE7C9801371C3E300F1D146 /* reply.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

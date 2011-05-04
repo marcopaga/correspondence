@@ -27,4 +27,13 @@
 
 }
 
+- (void)addReplyToMessage:(COMessage *)message
+{
+    COMessage *replyMessage = [self newObject];
+    [replyMessage setTopic:[message topic]];
+    [replyMessage setParent:message];
+    [replyMessage setSubjectLine:[@"Re: " stringByAppendingString:[message subjectLine]]];
+    [listView reloadData];
+}
+
 @end

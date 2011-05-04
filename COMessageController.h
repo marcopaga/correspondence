@@ -10,10 +10,13 @@
 #import "COListController.h"
 #import "COMessageViewCell.h"
 #import "COMessage.h"
+#import "COSharedContext.h"
 
 
 @interface COMessageController : COListController {
     
 }
+
+- (void)addReplyToMessage:(COMessage *)message;
 
 @end

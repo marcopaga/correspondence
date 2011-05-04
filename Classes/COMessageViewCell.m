@@ -10,4 +10,12 @@
 
 @implementation COMessageViewCell
 
+- (IBAction)addReplyMessage:(id)sender
+{
+    COMessage *message = [objectController content];
+    
+    COMessageController *controller = [_listView delegate];
+    [controller addReplyToMessage:message];
+}
+
 @end

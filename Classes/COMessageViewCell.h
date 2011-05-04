@@ -8,9 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 #import "COManagedViewCell.h"
+#import "COMessage.h"
+#import "COMessageController.h"
+#import "PXListView.h"
 
 @interface COMessageViewCell : COManagedViewCell
 {
 }
+
+- (IBAction)addReplyMessage:(id)sender;
 
 @end
