@@ -170,7 +170,7 @@
         NSManagedObject* newEntity = [NSEntityDescription insertNewObjectForEntityForName:
                                       ENTITY_PERSON inManagedObjectContext:moc];
         [newEntity setValue:@"Unnamed" forKey:@"name"];
-        [[self moc] save:nil];
+        [moc save:nil];
 }
 
 @end
