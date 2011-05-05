@@ -13,6 +13,11 @@
 @dynamic name;
 @dynamic topics;
 
+- (NSArray*) createAddressStrings
+{
+    return [NSArray arrayWithObject: [self valueForKey:@"name"]];
+}
+
 - (void)addTopicsObject:(NSManagedObject *)value {    
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
     [self willChangeValueForKey:@"topics" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];

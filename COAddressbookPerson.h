@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "COReceiver.h"
-
+#import <AddressBook/AddressBook.h>
 
 @interface COAddressbookPerson : COReceiver {
 @private

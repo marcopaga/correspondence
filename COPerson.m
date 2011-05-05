@@ -17,4 +17,22 @@
 @dynamic imageFilename;
 @dynamic phoneNumber;
 
+- (NSArray*) createAddressStrings
+{
+    NSString* name = [self valueForKey:@"name"];
+    
+    NSString* street = [self valueForKey:@"street"];
+    NSString* postalCode = [self valueForKey:@"postalCode"];
+    NSString* city = [self valueForKey:@"city"];
+    
+    NSString* cityRow = [NSString stringWithFormat: @"%@ %@", postalCode, city];
+    
+    NSMutableArray* addressOutput = [NSMutableArray arrayWithCapacity:3];
+    [addressOutput insertObject:name atIndex:0];
+    [addressOutput insertObject:street atIndex:1];
+    [addressOutput insertObject:cityRow atIndex:2];
+    
+    return addressOutput;
+}
+
 @end
