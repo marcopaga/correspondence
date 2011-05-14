@@ -48,6 +48,7 @@
 		A95CE8EA1353040E00C9E82D /* COSharedContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A95F8E14134CD9B500C16004 /* COSharedContext.m */; };
 		A95CE8EC1353042E00C9E82D /* COCustomAddressHUDController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */; };
 		A95D7BB713275BC10019DEEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFA8991323C4B900E42B00 /* AddressBook.framework */; };
+		A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A966F73F137F11EF007488DA /* AbstractCoreDataTest.m */; };
 		A974397B13351EDD00D4262D /* COConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A974397A13351EDD00D4262D /* COConstants.m */; };
 		A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CBB01318444200AAC978 /* Cocoa.framework */; };
 		A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB51318444200AAC978 /* InfoPlist.strings */; };
@@ -114,6 +115,8 @@
 		A94A34F11327D6D100D4F915 /* COPeopleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPeopleController.m; sourceTree = "<group>"; };
 		A95F8E13134CD9B500C16004 /* COSharedContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSharedContext.h; sourceTree = "<group>"; };
 		A95F8E14134CD9B500C16004 /* COSharedContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSharedContext.m; sourceTree = "<group>"; };
+		A966F73E137F11EF007488DA /* AbstractCoreDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractCoreDataTest.h; sourceTree = "<group>"; };
+		A966F73F137F11EF007488DA /* AbstractCoreDataTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractCoreDataTest.m; sourceTree = "<group>"; };
 		A974397913351EDD00D4262D /* COConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COConstants.h; sourceTree = "<group>"; };
 		A974397A13351EDD00D4262D /* COConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COConstants.m; sourceTree = "<group>"; };
 		A975CBAF1318444200AAC978 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -346,6 +349,8 @@
 				A975CBB31318444200AAC978 /* Supporting Files */,
 				A9CB4BBE1357316C009A166C /* ReceiverTests.h */,
 				A9CB4BBF1357316C009A166C /* ReceiverTests.m */,
+				A966F73E137F11EF007488DA /* AbstractCoreDataTest.h */,
+				A966F73F137F11EF007488DA /* AbstractCoreDataTest.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -524,6 +529,7 @@
 				2EE6558A13315D610039973A /* COListView.m in Sources */,
 				2E4DF47A13316F2A0044C9D1 /* COListController.m in Sources */,
 				2E3FBA0D134F9B8500DB95B2 /* COManagedViewCell.m in Sources */,
+				A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

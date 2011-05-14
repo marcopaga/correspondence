@@ -6,14 +6,13 @@
 //  Copyright 2011 The Correspondence Team. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import "AbstractCoreDataTest.h"
 #import "COReceiver.h"
 #import "COSharedContext.h"
 
 
-@interface ReceiverTests : SenTestCase {
-@private
-    
+@interface ReceiverTests : AbstractCoreDataTest {
+
 }
 
 @end
