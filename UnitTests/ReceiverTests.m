@@ -16,10 +16,21 @@
 {
     [super setUp];
     
-    name = @"FirstName LastName";
+    name = @"Correspondence-ReceiverTest-FirstName LastName";
     street = @"Somestreet. 1";
     postalCode = @"12345";
     city = @"City";    
+}
+
+-(void)tearDown
+{
+    if(uniqueId != nil){
+        ABAddressBook* sharedAddressBook = [ABAddressBook sharedAddressBook];
+        ABRecord* record = [sharedAddressBook recordForUniqueId:uniqueId];
+        [sharedAddressBook removeRecord: record];
+        [sharedAddressBook save];
+    }
+    [super tearDown];
 }
 
 -(NSManagedObject*)newEntity: (NSString*) entityName
@@ -55,6 +66,56 @@
     STAssertEqualObjects(thirdLine , [address objectAtIndex: 2], @"Expecting the postalCode and the city");
 }
 
+- (NSString*)createSamplePersonInAddressBook
+{
+    ABAddressBook *addressBook = [ABAddressBook sharedAddressBook];
+    ABPerson* person = [[ABPerson alloc] initWithAddressBook:addressBook];
+
+    [person setValue:@"Correspondence-ReceiverTest-FirstName" forProperty:kABFirstNameProperty];
+    [person setValue:@"LastName" forProperty:kABLastNameProperty];
+
+    NSMutableDictionary* anAddress = [NSMutableDictionary dictionary];
+    [anAddress setObject: street forKey:kABAddressStreetKey];
+    [anAddress setObject: postalCode forKey:kABAddressZIPKey];
+    [anAddress setObject: city forKey:kABAddressCityKey];
+    
+    ABMutableMultiValue *addresses = [[ABMutableMultiValue alloc] init];
+    [addresses addValue: anAddress withLabel: kABAddressHomeLabel];
+    [person setValue: addresses forProperty: kABAddressProperty];
+    
+    [addressBook addRecord:person];
+    [addressBook save];
+
+    uniqueId = [person uniqueId];
+    return uniqueId;
+}
+
+- (void)testAddressGenerationForAddressbookPersonWithoutData
+{
+    uniqueId = [self createSamplePersonInAddressBook];
+    
+    COAddressbookPerson* person = [self newEntity:@"AddressbookPerson"];
+    person.uniqueId = uniqueId;
+    
+    NSArray* address = [person createAddressStrings];
+    STAssertEqualObjects(3, [address count], @"Expecting 3 rows in result");
+}
+
+- (void)testAddressGenerationForAddressbookPerson
+{
+    uniqueId = [self createSamplePersonInAddressBook];
+
+    COAddressbookPerson* person = [self newEntity:@"AddressbookPerson"];
+    person.uniqueId = uniqueId;
+    
+    NSArray* address = [person createAddressStrings];
+    STAssertEqualObjects(3, [address count], @"Expecting 3 rows in result");
+    
+    STAssertEqualObjects(name, [address objectAtIndex: 0], @"Expecting the name");
+    STAssertEqualObjects(street, [address objectAtIndex: 1], @"Expecting the street");
+    NSString* thirdLine = [NSString stringWithFormat:@"%@ %@", postalCode, city];
+    STAssertEqualObjects(thirdLine , [address objectAtIndex: 2], @"Expecting the postalCode and the city");
+}
 
 
 @end

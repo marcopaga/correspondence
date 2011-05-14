@@ -6,8 +6,10 @@
 //  Copyright 2011 The Correspondence Team. All rights reserved.
 //
 
+#import <AddressBook/AddressBook.h>
 #import "AbstractCoreDataTest.h"
 #import "COPerson.h"
+#import "COAddressbookPerson.h"
 #import "COSharedContext.h"
 
 
@@ -16,6 +18,8 @@
     NSString* street;
     NSString* postalCode;
     NSString* city;
+    
+    NSString* uniqueId;
 }
 
 @end
