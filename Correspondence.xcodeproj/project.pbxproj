@@ -40,7 +40,6 @@
 		2EE6558913315D610039973A /* COListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6558813315D610039973A /* COListView.m */; };
 		2EE6558A13315D610039973A /* COListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6558813315D610039973A /* COListView.m */; };
 		2EE7C97F1371C3E300F1D146 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE7C97E1371C3E300F1D146 /* reply.png */; };
-		2EE7C9801371C3E300F1D146 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE7C97E1371C3E300F1D146 /* reply.png */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -49,10 +48,10 @@
 		A95CE8EC1353042E00C9E82D /* COCustomAddressHUDController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */; };
 		A95D7BB713275BC10019DEEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFA8991323C4B900E42B00 /* AddressBook.framework */; };
 		A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A966F73F137F11EF007488DA /* AbstractCoreDataTest.m */; };
+		A966F742137F22D5007488DA /* Correspondence_DataModel.xcdatamodel in Resources */ = {isa = PBXBuildFile; fileRef = 2E256C281318760700AE7F9E /* Correspondence_DataModel.xcdatamodel */; };
 		A974397B13351EDD00D4262D /* COConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A974397A13351EDD00D4262D /* COConstants.m */; };
 		A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CBB01318444200AAC978 /* Cocoa.framework */; };
 		A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB51318444200AAC978 /* InfoPlist.strings */; };
-		A975CBBA1318444200AAC978 /* AddressBookExplorationTest.h in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB91318444200AAC978 /* AddressBookExplorationTest.h */; };
 		A975CBBC1318444200AAC978 /* AddressBookExplorationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A975CBBB1318444200AAC978 /* AddressBookExplorationTest.m */; };
 		A99F6230135733EF001F69CE /* ReceiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4BBF1357316C009A166C /* ReceiverTests.m */; };
 		A99F6233135734E1001F69CE /* COMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A5EC81326727700D7C5EE /* COMessage.m */; };
@@ -449,9 +448,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A966F742137F22D5007488DA /* Correspondence_DataModel.xcdatamodel in Resources */,
 				A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */,
-				A975CBBA1318444200AAC978 /* AddressBookExplorationTest.h in Resources */,
-				2EE7C9801371C3E300F1D146 /* reply.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

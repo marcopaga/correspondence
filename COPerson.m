@@ -28,8 +28,8 @@
     NSString* cityRow = [NSString stringWithFormat: @"%@ %@", postalCode, city];
     
     NSMutableArray* addressOutput = [NSMutableArray arrayWithCapacity:3];
-    [addressOutput insertObject:name atIndex:0];
-    [addressOutput insertObject:street atIndex:1];
+    [addressOutput insertObject:[NSString stringWithFormat: @"%@", name] atIndex:0];
+    [addressOutput insertObject: [NSString stringWithFormat: @"%@", street] atIndex:1];
     [addressOutput insertObject:cityRow atIndex:2];
     
     return addressOutput;

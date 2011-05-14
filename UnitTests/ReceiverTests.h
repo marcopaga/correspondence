@@ -7,12 +7,15 @@
 //
 
 #import "AbstractCoreDataTest.h"
-#import "COReceiver.h"
+#import "COPerson.h"
 #import "COSharedContext.h"
 
 
 @interface ReceiverTests : AbstractCoreDataTest {
-
+    NSString* name;
+    NSString* street;
+    NSString* postalCode;
+    NSString* city;
 }
 
 @end

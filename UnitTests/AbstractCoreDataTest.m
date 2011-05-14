@@ -14,28 +14,44 @@
 - (void)setUp
 {
     NSLog(@"Setting up transient CoreData environment");
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles: nil] retain];
-    persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: managedObjectModel];
-    persistentStore = [persistentStoreCoordinator addPersistentStoreWithType: NSInMemoryStoreType
-                                configuration: nil
-                                          URL: nil
-                                      options: nil 
-                                        error: NULL];
+    
+    // The Core Data Model needs to included in the test target and
+    // added explicitly from another bundle
+    NSArray *bundles =
+        [NSArray arrayWithObject: [NSBundle bundleForClass: [self class]]];
+    managedObjectModel =
+        [[NSManagedObjectModel mergedModelFromBundles: bundles] retain];
+
+    persistentStoreCoordinator =
+        [[NSPersistentStoreCoordinator alloc]
+            initWithManagedObjectModel: managedObjectModel];
+    
+    persistentStore = [persistentStoreCoordinator 
+                        addPersistentStoreWithType: NSInMemoryStoreType
+                                     configuration: nil
+                                               URL: nil
+                                           options: nil 
+                                             error: NULL];
+    
     objectContext = [[NSManagedObjectContext alloc] init];
     [objectContext setPersistentStoreCoordinator: persistentStoreCoordinator];
 }
 
 - (void)tearDown
 {
-    NSLog(@"Shut down transient CoreData environment");
+    NSLog(@"Shutting down transient CoreData environment");
     [objectContext release];
     objectContext = nil;
+    
     NSError *error = nil;
     STAssertTrue([persistentStoreCoordinator removePersistentStore: persistentStore error: &error], 
                  @"couldn't remove persistent store: %@", error);
+
     persistentStore = nil;
+    
     [persistentStoreCoordinator release];
     persistentStoreCoordinator = nil;
+    
     [managedObjectModel release];
     managedObjectModel = nil;
 }
