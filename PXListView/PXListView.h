@@ -60,8 +60,12 @@
 @property (nonatomic, assign) BOOL usesLiveResize;
 
 - (void)reloadData;
+-(void)reloadRowAtIndex:(NSInteger)inIndex;
 
 - (PXListViewCell*)dequeueCellWithReusableIdentifier:(NSString*)identifier;
+
+- (NSArray*)visibleCells;
+-(PXListViewCell *)cellForRowAtIndex:(NSUInteger)inIndex;
 
 - (NSRange)visibleRange;
 - (NSRect)rectOfRow:(NSUInteger)row;
@@ -70,11 +74,5 @@
 
 - (void)scrollToRow:(NSUInteger)row;
 - (void)scrollRowToVisible:(NSUInteger)row;
-
-- (NSImage*)dragImageForRowsWithIndexes:(NSIndexSet *)dragRows
-                                  event:(NSEvent*)dragEvent clickedCell:(PXListViewCell*)clickedCell
-                                 offset:(NSPointPointer)dragImageOffset;
-- (void)setShowsDropHighlight:(BOOL)inState;
-- (void)setDropRow:(NSUInteger)row dropHighlight:(PXListViewDropHighlight)dropHighlight;
 
 @end

@@ -10,6 +10,8 @@
 		2E256C291318760700AE7F9E /* Correspondence_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2E256C281318760700AE7F9E /* Correspondence_DataModel.xcdatamodel */; };
 		2E256C2C131876A200AE7F9E /* COAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E256C2B131876A200AE7F9E /* COAppDelegate.m */; };
 		2E2A5EC91326727700D7C5EE /* COMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A5EC81326727700D7C5EE /* COMessage.m */; };
+		2E33CB8E137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E33CB8D137FBF70009CAA35 /* PXListView+UserInteraction.m */; };
+		2E33CB8F137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E33CB8D137FBF70009CAA35 /* PXListView+UserInteraction.m */; };
 		2E3B3197132EA8FB002F8803 /* COMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3B3196132EA8FB002F8803 /* COMessageController.m */; };
 		2E3B3198132EA8FB002F8803 /* COMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3B3196132EA8FB002F8803 /* COMessageController.m */; };
 		2E3B319B132EB5CB002F8803 /* COTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3B319A132EB5CA002F8803 /* COTopicController.m */; };
@@ -79,6 +81,8 @@
 		2E256C2B131876A200AE7F9E /* COAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COAppDelegate.m; sourceTree = "<group>"; };
 		2E2A5EC71326727700D7C5EE /* COMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COMessage.h; sourceTree = "<group>"; };
 		2E2A5EC81326727700D7C5EE /* COMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COMessage.m; sourceTree = "<group>"; };
+		2E33CB8C137FBF70009CAA35 /* PXListView+UserInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+UserInteraction.h"; sourceTree = "<group>"; };
+		2E33CB8D137FBF70009CAA35 /* PXListView+UserInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PXListView+UserInteraction.m"; sourceTree = "<group>"; };
 		2E3B3195132EA8FB002F8803 /* COMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COMessageController.h; sourceTree = "<group>"; };
 		2E3B3196132EA8FB002F8803 /* COMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COMessageController.m; sourceTree = "<group>"; };
 		2E3B3199132EB5CA002F8803 /* COTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COTopicController.h; sourceTree = "<group>"; };
@@ -307,6 +311,8 @@
 		2EBEC339132BC65000C84085 /* PXListView */ = {
 			isa = PBXGroup;
 			children = (
+				2E33CB8C137FBF70009CAA35 /* PXListView+UserInteraction.h */,
+				2E33CB8D137FBF70009CAA35 /* PXListView+UserInteraction.m */,
 				2EBEC33C132BC65000C84085 /* PXListView+Private.h */,
 				2EBEC33D132BC65000C84085 /* PXListView.h */,
 				2EBEC33E132BC65000C84085 /* PXListView.m */,
@@ -504,6 +510,7 @@
 				A9CB4BAE13572917009A166C /* COReceiver.m in Sources */,
 				A9CB4BB113572918009A166C /* COAddressbookPerson.m in Sources */,
 				A9CB4BB413572918009A166C /* COPerson.m in Sources */,
+				2E33CB8E137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +535,7 @@
 				2E4DF47A13316F2A0044C9D1 /* COListController.m in Sources */,
 				2E3FBA0D134F9B8500DB95B2 /* COManagedViewCell.m in Sources */,
 				A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */,
+				2E33CB8F137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

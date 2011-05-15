@@ -37,9 +37,7 @@ typedef NSInteger PXIsDragStartResult;
 - (void)updateCells;
 - (void)enqueueCell:(PXListViewCell*)cell;
 
-- (void)handleMouseDown:(NSEvent*)theEvent inCell:(PXListViewCell*)theCell;
-- (void)handleMouseDownOutsideCells:(NSEvent*)theEvent;
-
 - (void)contentViewBoundsDidChange:(NSNotification*)notification;
+-(void)layoutCellsForResizeEvent;
 
 @end
