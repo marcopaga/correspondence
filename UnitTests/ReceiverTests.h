@@ -13,13 +13,17 @@
 #import "COSharedContext.h"
 
 
-@interface ReceiverTests : AbstractCoreDataTest {
-    NSString* name;
-    NSString* street;
-    NSString* postalCode;
-    NSString* city;
-    
+@interface ReceiverTests : AbstractCoreDataTest
+{
     NSString* uniqueId;
 }
+
+extern NSString* const FIRST_NAME;
+extern NSString* const LAST_NAME;
+extern NSString* const NAME;
+extern NSString* const STREET;
+extern NSString* const POSTAL_CODE;
+extern NSString* const CITY;
+
 
 @end
