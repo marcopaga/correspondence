@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E256C291318760700AE7F9E /* Correspondence_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2E256C281318760700AE7F9E /* Correspondence_DataModel.xcdatamodel */; };
 		2E256C2C131876A200AE7F9E /* COAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E256C2B131876A200AE7F9E /* COAppDelegate.m */; };
 		2E2A5EC91326727700D7C5EE /* COMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A5EC81326727700D7C5EE /* COMessage.m */; };
 		2E33CB8E137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E33CB8D137FBF70009CAA35 /* PXListView+UserInteraction.m */; };
@@ -24,6 +23,8 @@
 		2E4DF47A13316F2A0044C9D1 /* COListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4DF47813316F2A0044C9D1 /* COListController.m */; };
 		2E4DF47E133285FF0044C9D1 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4DF47C133285FF0044C9D1 /* up.png */; };
 		2E4DF47F133285FF0044C9D1 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4DF47D133285FF0044C9D1 /* down.png */; };
+		2E52894C13843A91002F1F93 /* Correspondence_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E52894A13843A91002F1F93 /* Correspondence_DataModel.xcdatamodeld */; };
+		2E52894D13843A91002F1F93 /* Correspondence_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E52894A13843A91002F1F93 /* Correspondence_DataModel.xcdatamodeld */; };
 		2EBEC344132BC65000C84085 /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33B132BC65000C84085 /* PXListDocumentView.m */; };
 		2EBEC345132BC65000C84085 /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33B132BC65000C84085 /* PXListDocumentView.m */; };
 		2EBEC346132BC65000C84085 /* PXListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEC33E132BC65000C84085 /* PXListView.m */; };
@@ -50,7 +51,6 @@
 		A95CE8EC1353042E00C9E82D /* COCustomAddressHUDController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */; };
 		A95D7BB713275BC10019DEEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFA8991323C4B900E42B00 /* AddressBook.framework */; };
 		A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A966F73F137F11EF007488DA /* AbstractCoreDataTest.m */; };
-		A966F742137F22D5007488DA /* Correspondence_DataModel.xcdatamodel in Resources */ = {isa = PBXBuildFile; fileRef = 2E256C281318760700AE7F9E /* Correspondence_DataModel.xcdatamodel */; };
 		A974397B13351EDD00D4262D /* COConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A974397A13351EDD00D4262D /* COConstants.m */; };
 		A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CBB01318444200AAC978 /* Cocoa.framework */; };
 		A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB51318444200AAC978 /* InfoPlist.strings */; };
@@ -79,7 +79,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		2E256C281318760700AE7F9E /* Correspondence_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Correspondence_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		2E256C2A131876A200AE7F9E /* COAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COAppDelegate.h; sourceTree = "<group>"; };
 		2E256C2B131876A200AE7F9E /* COAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COAppDelegate.m; sourceTree = "<group>"; };
 		2E2A5EC71326727700D7C5EE /* COMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COMessage.h; sourceTree = "<group>"; };
@@ -98,6 +97,8 @@
 		2E4DF47813316F2A0044C9D1 /* COListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COListController.m; sourceTree = "<group>"; };
 		2E4DF47C133285FF0044C9D1 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = up.png; path = Resources/Icons/up.png; sourceTree = "<group>"; };
 		2E4DF47D133285FF0044C9D1 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = down.png; path = Resources/Icons/down.png; sourceTree = "<group>"; };
+		2E52894B13843A91002F1F93 /* Correspondence_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Correspondence_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		2E52895013844356002F1F93 /* Correspondence_DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Correspondence_DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		2EBEC33A132BC65000C84085 /* PXListDocumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXListDocumentView.h; path = PXListView/PXListDocumentView.h; sourceTree = "<group>"; };
 		2EBEC33B132BC65000C84085 /* PXListDocumentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXListDocumentView.m; path = PXListView/PXListDocumentView.m; sourceTree = "<group>"; };
 		2EBEC33C132BC65000C84085 /* PXListView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+Private.h"; sourceTree = "<group>"; };
@@ -333,7 +334,7 @@
 		7756732906782D8800D1FEB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2E256C281318760700AE7F9E /* Correspondence_DataModel.xcdatamodel */,
+				2E52894A13843A91002F1F93 /* Correspondence_DataModel.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -461,7 +462,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A966F742137F22D5007488DA /* Correspondence_DataModel.xcdatamodel in Resources */,
 				A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,7 +498,6 @@
 				2EBEC34F132BD84B00C84085 /* PXListViewDropHighlight.h in Sources */,
 				2EBEC350132BD84B00C84085 /* PXListDocumentView.h in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				2E256C291318760700AE7F9E /* Correspondence_DataModel.xcdatamodel in Sources */,
 				2E256C2C131876A200AE7F9E /* COAppDelegate.m in Sources */,
 				2E2A5EC91326727700D7C5EE /* COMessage.m in Sources */,
 				A94A34F21327D6D100D4F915 /* COPeopleController.m in Sources */,
@@ -519,6 +518,7 @@
 				A9CB4BB413572918009A166C /* COPerson.m in Sources */,
 				2E33CB8E137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */,
 				A9EF1EA313839AFC005FA213 /* COPersistence.m in Sources */,
+				2E52894C13843A91002F1F93 /* Correspondence_DataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +546,7 @@
 				A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */,
 				2E33CB8F137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */,
 				A9EF1EA413839AFC005FA213 /* COPersistence.m in Sources */,
+				2E52894D13843A91002F1F93 /* Correspondence_DataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +726,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E52894A13843A91002F1F93 /* Correspondence_DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E52895013844356002F1F93 /* Correspondence_DataModel 2.xcdatamodel */,
+				2E52894B13843A91002F1F93 /* Correspondence_DataModel.xcdatamodel */,
+			);
+			currentVersion = 2E52894B13843A91002F1F93 /* Correspondence_DataModel.xcdatamodel */;
+			path = Correspondence_DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }
