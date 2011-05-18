@@ -177,12 +177,8 @@
 				2EBEC339132BC65000C84085 /* PXListView */,
 				2E256C2A131876A200AE7F9E /* COAppDelegate.h */,
 				2E256C2B131876A200AE7F9E /* COAppDelegate.m */,
-				A94A34F01327D6D100D4F915 /* COPeopleController.h */,
-				A94A34F11327D6D100D4F915 /* COPeopleController.m */,
 				A974397913351EDD00D4262D /* COConstants.h */,
 				A974397A13351EDD00D4262D /* COConstants.m */,
-				A9A5BA5A13364535001EDA12 /* COCustomAddressHUDController.h */,
-				A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */,
 				A9EF1EA113839AFC005FA213 /* COPersistence.h */,
 				A9EF1EA213839AFC005FA213 /* COPersistence.m */,
 			);
@@ -222,6 +218,7 @@
 			children = (
 				A95D7BBE132760970019DEEB /* Entities */,
 				7756732906782D8800D1FEB8 /* Models */,
+				A9EF1EAC138440A3005FA213 /* Controllers */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -370,6 +367,17 @@
 				A975CBB81318444200AAC978 /* UnitTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9EF1EAC138440A3005FA213 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A94A34F01327D6D100D4F915 /* COPeopleController.h */,
+				A94A34F11327D6D100D4F915 /* COPeopleController.m */,
+				A9A5BA5A13364535001EDA12 /* COCustomAddressHUDController.h */,
+				A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
