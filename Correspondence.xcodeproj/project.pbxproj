@@ -350,7 +350,7 @@
 				A9CB4BAC13572917009A166C /* COReceiver.h */,
 				A9CB4BAD13572917009A166C /* COReceiver.m */,
 			);
-			name = Entities;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		A975CBB21318444200AAC978 /* UnitTests */ = {
