@@ -11,19 +11,9 @@
 @implementation COAppDelegate
 
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        persistence = [[COPersistence alloc] init];
-    }
-    
-    return self;
-}
-
 - (NSManagedObjectContext *)managedObjectContext
 {
-    return [persistence managedObjectContext];
+    return [COPersistence managedObjectContext];
 }
 
 /**

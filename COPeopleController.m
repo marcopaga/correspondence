@@ -161,7 +161,7 @@
 
 -(NSManagedObjectContext*)sharedObjectContext
 {
-    return [COSharedContext sharedObjectContext];
+    return [COPersistence managedObjectContext];
 }
 
 - (IBAction)addPerson:(id)sender

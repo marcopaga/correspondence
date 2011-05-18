@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <AddressBook/AddressBook.h>
 #import <AddressBook/ABPeoplePickerView.h>
+#import "COPersistence.h"
 #import "COConstants.h"
 #import "COCustomAddressHUDController.h"
-#import "COSharedContext.h"
 
 @interface COPeopleController : NSObject {
     IBOutlet ABPeoplePickerView *peoplePicker;

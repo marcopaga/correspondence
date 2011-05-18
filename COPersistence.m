@@ -11,17 +11,7 @@
 
 @implementation COPersistence
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
-- (NSManagedObjectModel *)managedObjectModel {
++ (NSManagedObjectModel *)managedObjectModel {
     
     if (managedObjectModel != nil) {
         return managedObjectModel;
@@ -31,7 +21,7 @@
     return managedObjectModel;
 }
 
-- (NSPersistentStoreCoordinator *) persistentStoreCoordinator {
++ (NSPersistentStoreCoordinator *) persistentStoreCoordinator {
     
     if (persistentStoreCoordinator != nil) {
         return persistentStoreCoordinator;
@@ -58,7 +48,7 @@
     return persistentStoreCoordinator;
 }
 
-- (NSManagedObjectContext *) managedObjectContext {
++ (NSManagedObjectContext *) managedObjectContext {
     
     if (managedObjectContext != nil) {
         return managedObjectContext;
@@ -71,20 +61,6 @@
     }
     
     return managedObjectContext;
-}
-
-- (void)dealloc
-{
-    [managedObjectContext release];
-    managedObjectContext = nil;
-    
-    [persistentStoreCoordinator release];
-    persistentStoreCoordinator = nil;
-    
-    [managedObjectModel release];
-    managedObjectModel = nil;
-    
-    [super dealloc];
 }
 
 @end

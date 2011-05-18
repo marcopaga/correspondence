@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import "COConstants.h"
+#import "COPersistence.h"
 #import "COCustomAddressHUDController.h"
-#import "COSharedContext.h"
 
 @interface COCustomAddressHUDController : NSWindowController {
 

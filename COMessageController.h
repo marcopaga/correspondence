@@ -10,7 +10,6 @@
 #import "COListController.h"
 #import "COMessageViewCell.h"
 #import "COMessage.h"
-#import "COSharedContext.h"
 
 
 @interface COMessageController : COListController {
