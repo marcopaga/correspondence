@@ -8,6 +8,8 @@
 
 #import "COConstants.h"
 
+NSString* const APP_NAME = @"Correspondence";
+
 NSString* const ENTITY_ADDRESSBOOK_PERSON = @"AddressbookPerson";
 NSString* const ENTITY_PERSON = @"Person";
 

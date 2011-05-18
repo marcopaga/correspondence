@@ -7,21 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "COConstants.h"
+#import "COPersistence.h"
 
 @interface COAppDelegate : NSObject <NSApplicationDelegate>
 {
-    IBOutlet NSWindow *window;
-    
-    NSPersistentStoreCoordinator *persistentStoreCoordinator;
-    NSManagedObjectModel *managedObjectModel;
-    NSManagedObjectContext *managedObjectContext;
-
+    IBOutlet NSWindow* window;
+    COPersistence* persistence;
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
-- (NSManagedObjectModel *)managedObjectModel;
 - (NSManagedObjectContext *)managedObjectContext;
 
+- (NSString *)applicationSupportFolder;
 - (IBAction)saveAction:sender;
 
 @end

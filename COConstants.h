@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString* const APP_NAME;
+
 extern NSString* const ENTITY_ADDRESSBOOK_PERSON;
 extern NSString* const ENTITY_PERSON;
 

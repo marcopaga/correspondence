@@ -68,6 +68,9 @@
 		A9CB4BB913572E18009A166C /* TopicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9CB4BB713572E18009A166C /* TopicViewCell.xib */; };
 		A9CB4BBB13572E60009A166C /* CustomAddress.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9CB4BBA13572E60009A166C /* CustomAddress.xib */; };
 		A9CB4BBD13572E85009A166C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9CB4BBC13572E85009A166C /* MainMenu.xib */; };
+		A9EF1EA313839AFC005FA213 /* COPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1EA213839AFC005FA213 /* COPersistence.m */; };
+		A9EF1EA413839AFC005FA213 /* COPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1EA213839AFC005FA213 /* COPersistence.m */; };
+		A9EF1EA613842DE7005FA213 /* COConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A974397A13351EDD00D4262D /* COConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +147,8 @@
 		A9CB4BBC13572E85009A166C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = "<group>"; };
 		A9CB4BBE1357316C009A166C /* ReceiverTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverTests.h; sourceTree = "<group>"; };
 		A9CB4BBF1357316C009A166C /* ReceiverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverTests.m; sourceTree = "<group>"; };
+		A9EF1EA113839AFC005FA213 /* COPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPersistence.h; sourceTree = "<group>"; };
+		A9EF1EA213839AFC005FA213 /* COPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPersistence.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +188,8 @@
 				A9A5BA5B13364535001EDA12 /* COCustomAddressHUDController.m */,
 				A95F8E13134CD9B500C16004 /* COSharedContext.h */,
 				A95F8E14134CD9B500C16004 /* COSharedContext.m */,
+				A9EF1EA113839AFC005FA213 /* COPersistence.h */,
+				A9EF1EA213839AFC005FA213 /* COPersistence.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -511,6 +518,7 @@
 				A9CB4BB113572918009A166C /* COAddressbookPerson.m in Sources */,
 				A9CB4BB413572918009A166C /* COPerson.m in Sources */,
 				2E33CB8E137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */,
+				A9EF1EA313839AFC005FA213 /* COPersistence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,10 +540,12 @@
 				A99F6233135734E1001F69CE /* COMessage.m in Sources */,
 				2E3B31A0132EB88A002F8803 /* COTopicViewCell.m in Sources */,
 				2EE6558A13315D610039973A /* COListView.m in Sources */,
+				A9EF1EA613842DE7005FA213 /* COConstants.m in Sources */,
 				2E4DF47A13316F2A0044C9D1 /* COListController.m in Sources */,
 				2E3FBA0D134F9B8500DB95B2 /* COManagedViewCell.m in Sources */,
 				A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */,
 				2E33CB8F137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */,
+				A9EF1EA413839AFC005FA213 /* COPersistence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
