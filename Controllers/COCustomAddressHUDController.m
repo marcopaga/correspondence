@@ -24,11 +24,11 @@
 }
 
 - (IBAction)okButton:(id)sender {
-    [[COSharedContext sharedObjectContext] save:nil];
+    [[COPersistence managedObjectContext] save:nil];
 }
 
 -(NSManagedObject*)loadEntityFor:(NSString *)objectId{
-    return [[COSharedContext sharedObjectContext] objectWithID:objectId];
+    return [[COPersistence managedObjectContext] objectWithID:objectId];
 }
 
 @end

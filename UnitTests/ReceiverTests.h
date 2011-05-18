@@ -10,7 +10,6 @@
 #import "AbstractCoreDataTest.h"
 #import "COPerson.h"
 #import "COAddressbookPerson.h"
-#import "COSharedContext.h"
 
 
 @interface ReceiverTests : AbstractCoreDataTest

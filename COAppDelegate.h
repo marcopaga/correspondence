@@ -13,7 +13,6 @@
 @interface COAppDelegate : NSObject <NSApplicationDelegate>
 {
     IBOutlet NSWindow* window;
-    COPersistence* persistence;
 }
 
 - (NSManagedObjectContext *)managedObjectContext;

@@ -12,13 +12,16 @@
 
 @interface COPersistence : NSObject
 {
-    NSPersistentStoreCoordinator *persistentStoreCoordinator;
-    NSManagedObjectModel *managedObjectModel;
-    NSManagedObjectContext *managedObjectContext;    
+
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
-- (NSManagedObjectModel *)managedObjectModel;
-- (NSManagedObjectContext *)managedObjectContext;
+
++ (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
++ (NSManagedObjectModel *)managedObjectModel;
++ (NSManagedObjectContext *)managedObjectContext;
 
 @end
+
+static NSPersistentStoreCoordinator *persistentStoreCoordinator;
+static NSManagedObjectModel *managedObjectModel;
+static NSManagedObjectContext *managedObjectContext;    
