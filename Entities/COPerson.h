@@ -14,11 +14,11 @@
 @interface COPerson : COReceiver {
 @private
 }
-@property (nonatomic, retain) NSString * email;
-@property (nonatomic, retain) NSString * postalCode;
-@property (nonatomic, retain) NSString * street;
-@property (nonatomic, retain) NSString * city;
-@property (nonatomic, retain) NSString * imageFilename;
-@property (nonatomic, retain) NSString * phoneNumber;
+@property(nonatomic, retain) NSString *email;
+@property(nonatomic, retain) NSString *postalCode;
+@property(nonatomic, retain) NSString *street;
+@property(nonatomic, retain) NSString *city;
+@property(nonatomic, retain) NSString *imageFilename;
+@property(nonatomic, retain) NSString *phoneNumber;
 
 @end

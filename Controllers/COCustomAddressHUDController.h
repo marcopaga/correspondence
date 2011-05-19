@@ -13,13 +13,15 @@
 
 @interface COCustomAddressHUDController : NSWindowController {
 
-    NSManagedObject* entity;
+    NSManagedObject *entity;
 }
 
-@property(retain) NSManagedObject* entity;
+@property(retain) NSManagedObject *entity;
 
-- (id)initWith: (NSString*) objectId;
+- (id)initWith:(NSString *)objectId;
+
 - (IBAction)okButton:(id)sender;
-- (NSManagedObject*)loadEntityFor: (NSString*) objectId;
+
+- (NSManagedObject *)loadEntityFor:(NSString *)objectId;
 
 @end

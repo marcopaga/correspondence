@@ -10,13 +10,13 @@
 
 
 @interface AbstractCoreDataTest : SenTestCase {
-    
-    NSManagedObjectContext* objectContext;
+
+    NSManagedObjectContext *objectContext;
 
 @private
-    NSManagedObjectModel* managedObjectModel;
-    NSPersistentStoreCoordinator* persistentStoreCoordinator;
-    NSPersistentStore* persistentStore;
+    NSManagedObjectModel *managedObjectModel;
+    NSPersistentStoreCoordinator *persistentStoreCoordinator;
+    NSPersistentStore *persistentStore;
 }
 
 @end

@@ -10,14 +10,15 @@
 #import "COConstants.h"
 
 
-@interface COPersistence : NSObject
-{
+@interface COPersistence : NSObject {
 
 }
 
 
 + (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
+
 + (NSManagedObjectModel *)managedObjectModel;
+
 + (NSManagedObjectContext *)managedObjectContext;
 
 @end

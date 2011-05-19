@@ -13,12 +13,11 @@
 @dynamic name;
 @dynamic topics;
 
-- (NSArray*) createAddressStrings
-{
-    return [NSArray arrayWithObject: [self valueForKey:@"name"]];
+- (NSArray *)createAddressStrings {
+    return [NSArray arrayWithObject:[self valueForKey:@"name"]];
 }
 
-- (void)addTopicsObject:(NSManagedObject *)value {    
+- (void)addTopicsObject:(NSManagedObject *)value {
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
     [self willChangeValueForKey:@"topics" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
     [[self primitiveValueForKey:@"topics"] addObject:value];
@@ -34,7 +33,7 @@
     [changedObjects release];
 }
 
-- (void)addTopics:(NSSet *)value {    
+- (void)addTopics:(NSSet *)value {
     [self willChangeValueForKey:@"topics" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
     [[self primitiveValueForKey:@"topics"] unionSet:value];
     [self didChangeValueForKey:@"topics" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];

@@ -12,8 +12,8 @@
 
 @interface COTopicController : COListController {
 
-    IBOutlet PXListView	*childView;
-    
+    IBOutlet PXListView *childView;
+
 }
 
 @end

@@ -20,10 +20,11 @@
  *  Representation of a single entry of a PXListView. Each list view entry uses an object
  *  controller bound to an NSManagedObject entity. All ui items are bound to the objectController in their xib file.
  */
+
 @interface COManagedViewCell : PXListViewCell {
-  NSObjectController *objectController;
+    NSObjectController *objectController;
 }
 
-@property (nonatomic, retain) IBOutlet NSObjectController *objectController;
+@property(nonatomic, retain) IBOutlet NSObjectController *objectController;
 
 @end

@@ -13,13 +13,12 @@
 
 @synthesize entity;
 
-- (id)initWith: (NSString*) objectId
-{
-    self = [super initWithWindowNibName: NIB_CUSTOM_ADDRESS];
+- (id)initWith:(NSString *)objectId {
+    self = [super initWithWindowNibName:NIB_CUSTOM_ADDRESS];
     if (self) {
-        entity = [self loadEntityFor: objectId];
+        entity = [self loadEntityFor:objectId];
     }
-    
+
     return self;
 }
 
@@ -27,7 +26,7 @@
     [[COPersistence managedObjectContext] save:nil];
 }
 
--(NSManagedObject*)loadEntityFor:(NSString *)objectId{
+- (NSManagedObject *)loadEntityFor:(NSString *)objectId {
     return [[COPersistence managedObjectContext] objectWithID:objectId];
 }
 

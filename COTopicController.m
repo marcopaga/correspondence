@@ -11,13 +11,12 @@
 
 @implementation COTopicController
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
     [super awakeFromNib];
     nibName = [NSString stringWithString:@"TopicViewCell"];
 }
 
-- (void)listViewSelectionDidChange:(NSNotification*)aNotification {
+- (void)listViewSelectionDidChange:(NSNotification *)aNotification {
     PXListView *aListView = [aNotification object];
     NSIndexSet *selectedRows = [aListView selectedRows];
     [self setSelectionIndexes:selectedRows];

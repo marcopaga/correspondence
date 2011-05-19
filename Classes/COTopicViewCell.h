@@ -9,8 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "COManagedViewCell.h"
 
-@interface COTopicViewCell : COManagedViewCell
-{
+@interface COTopicViewCell : COManagedViewCell {
 }
 
 @end

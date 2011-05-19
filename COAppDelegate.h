@@ -10,14 +10,14 @@
 #import "COConstants.h"
 #import "COPersistence.h"
 
-@interface COAppDelegate : NSObject <NSApplicationDelegate>
-{
-    IBOutlet NSWindow* window;
+@interface COAppDelegate : NSObject <NSApplicationDelegate> {
+    IBOutlet NSWindow *window;
 }
 
 - (NSManagedObjectContext *)managedObjectContext;
 
 - (NSString *)applicationSupportFolder;
+
 - (IBAction)saveAction:sender;
 
 @end

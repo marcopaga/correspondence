@@ -11,8 +11,7 @@
 @implementation COAppDelegate
 
 
-- (NSManagedObjectContext *)managedObjectContext
-{
+- (NSManagedObjectContext *)managedObjectContext {
     return [COPersistence managedObjectContext];
 }
 
@@ -27,14 +26,14 @@
 
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : NSTemporaryDirectory();
-    return [basePath stringByAppendingPathComponent: APP_NAME];
+    return [basePath stringByAppendingPathComponent:APP_NAME];
 }
 
 /**
     Returns the NSUndoManager for the application.  In this case, the manager
     returned is that of the managed object context for the application.
  */
- 
+
 - (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)window {
     return [[self managedObjectContext] undoManager];
 }
@@ -45,8 +44,8 @@
     message to the application's managed object context.  Any encountered errors
     are presented to the user.
  */
- 
-- (IBAction) saveAction:(id)sender {
+
+- (IBAction)saveAction:(id)sender {
 
     NSError *error = nil;
     if (![[self managedObjectContext] save:&error]) {
@@ -59,16 +58,16 @@
     handle the saving of changes in the application managed object context
     before the application terminates.
  */
- 
+
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
 
     NSError *error;
     int reply = NSTerminateNow;
-    
+
     if ([self managedObjectContext] != nil) {
         if ([[self managedObjectContext] commitEditing]) {
-            if ([[self managedObjectContext] hasChanges] && ![[self managedObjectContext]save:&error]) {
-				
+            if ([[self managedObjectContext] hasChanges] && ![[self managedObjectContext] save:&error]) {
+
                 // This error handling simply presents error information in a panel with an 
                 // "Ok" button, which does not include any attempt at error recovery (meaning, 
                 // attempting to fix the error.)  As a result, this implementation will 
@@ -79,26 +78,26 @@
                 // recovery steps.  
 
                 BOOL errorResult = [[NSApplication sharedApplication] presentError:error];
-				
+
                 if (errorResult == YES) {
                     reply = NSTerminateCancel;
-                } 
+                }
 
                 else {
-					
-                    int alertReturn = NSRunAlertPanel(nil, @"Could not save changes while quitting. Quit anyway?" , @"Quit anyway", @"Cancel", nil);
+
+                    int alertReturn = NSRunAlertPanel(nil, @"Could not save changes while quitting. Quit anyway?", @"Quit anyway", @"Cancel", nil);
                     if (alertReturn == NSAlertAlternateReturn) {
-                        reply = NSTerminateCancel;	
+                        reply = NSTerminateCancel;
                     }
                 }
             }
-        } 
-        
+        }
+
         else {
             reply = NSTerminateCancel;
         }
     }
-    
+
     return reply;
 }
 

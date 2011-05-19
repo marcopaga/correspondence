@@ -11,8 +11,8 @@
 
 @interface AddressBookExplorationTest : SenTestCase {
 @private
-    ABRecord* testRecord;
-    NSString* uniqueId;
+    ABRecord *testRecord;
+    NSString *uniqueId;
 }
 
 @end

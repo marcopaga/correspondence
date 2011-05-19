@@ -13,9 +13,10 @@
  * This list view shows entries as soon as they are available from the array controllers.
  * The first entry is automatically selected when the list entries is reloaded.
  */
+
 @interface COListView : PXListView {
 @private
-    
+
 }
 
 @end

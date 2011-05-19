@@ -14,6 +14,6 @@
 @interface COAddressbookPerson : COReceiver {
 @private
 }
-@property (nonatomic, retain) NSString * uniqueId;
+@property(nonatomic, retain) NSString *uniqueId;
 
 @end

@@ -11,15 +11,14 @@
 
 @implementation COMessageController
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
     [super awakeFromNib];
     nibName = [NSString stringWithString:@"MessageViewCell"];
 }
 
 // Change the MessageDetailView
 
-- (void)listViewSelectionDidChange:(NSNotification*)aNotification {
+- (void)listViewSelectionDidChange:(NSNotification *)aNotification {
     PXListView *aListView = [aNotification object];
     NSIndexSet *selectedRows = [aListView selectedRows];
     // select items in arraycontroller
@@ -27,8 +26,7 @@
 
 }
 
-- (void)addReplyToMessage:(COMessage *)message
-{
+- (void)addReplyToMessage:(COMessage *)message {
     COMessage *replyMessage = [self newObject];
     [replyMessage setTopic:[message topic]];
     [replyMessage setParent:message];

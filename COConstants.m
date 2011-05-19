@@ -8,9 +8,9 @@
 
 #import "COConstants.h"
 
-NSString* const APP_NAME = @"Correspondence";
+NSString *const APP_NAME = @"Correspondence";
 
-NSString* const ENTITY_ADDRESSBOOK_PERSON = @"AddressbookPerson";
-NSString* const ENTITY_PERSON = @"Person";
+NSString *const ENTITY_ADDRESSBOOK_PERSON = @"AddressbookPerson";
+NSString *const ENTITY_PERSON = @"Person";
 
-NSString* const NIB_CUSTOM_ADDRESS = @"CustomAddress";
+NSString *const NIB_CUSTOM_ADDRESS = @"CustomAddress";

@@ -12,17 +12,16 @@
 #import "COAddressbookPerson.h"
 
 
-@interface ReceiverTests : AbstractCoreDataTest
-{
-    NSString* uniqueId;
+@interface ReceiverTests : AbstractCoreDataTest {
+    NSString *uniqueId;
 }
 
-extern NSString* const FIRST_NAME;
-extern NSString* const LAST_NAME;
-extern NSString* const NAME;
-extern NSString* const STREET;
-extern NSString* const POSTAL_CODE;
-extern NSString* const CITY;
+extern NSString *const FIRST_NAME;
+extern NSString *const LAST_NAME;
+extern NSString *const NAME;
+extern NSString *const STREET;
+extern NSString *const POSTAL_CODE;
+extern NSString *const CITY;
 
 
 @end

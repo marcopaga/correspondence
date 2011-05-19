@@ -13,7 +13,7 @@
 
 
 @interface COMessageController : COListController {
-    
+
 }
 
 - (void)addReplyToMessage:(COMessage *)message;

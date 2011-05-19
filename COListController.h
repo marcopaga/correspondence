@@ -14,13 +14,14 @@
  *  This NSArrayController controls a list of list view entries for a single PXListView.
  *  Each list view entry is represented by a xib refrenced by nibName.
  */
-@interface COListController : NSArrayController<PXListViewDelegate> {
 
-    IBOutlet PXListView	*listView;
+@interface COListController : NSArrayController <PXListViewDelegate> {
+
+    IBOutlet PXListView *listView;
     NSString *nibName;
-    
+
 }
 
-@property (nonatomic, retain) NSString *nibName;
+@property(nonatomic, retain) NSString *nibName;
 
 @end

@@ -15,21 +15,19 @@
 
 #pragma mark Lifecycle
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
         [self registerForAddressBookNotifications];
         customAddressHudControllers = [[NSMutableArray array] retain];
     }
-    
+
     return self;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     [self unregisterFromAddressBookNotifications];
-    if(customAddressHudControllers != nil){
+    if (customAddressHudControllers != nil) {
         [customAddressHudControllers release];
         customAddressHudControllers = nil;
     }
@@ -38,43 +36,40 @@
 
 #pragma mark Notifications
 
--(void)registerForAddressBookNotifications
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector: @selector(addressBookChangedNotification:)
+- (void)registerForAddressBookNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(addressBookChangedNotification:)
                                                  name:kABDatabaseChangedExternallyNotification
                                                object:nil];
     [ABAddressBook sharedAddressBook];
 }
 
--(void)unregisterFromAddressBookNotifications
-{
+- (void)unregisterFromAddressBookNotifications {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
--(void)addressBookChangedNotification:(NSNotification*)notification {
+- (void)addressBookChangedNotification:(NSNotification *)notification {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        NSArray* updatedRecords = [[notification userInfo] objectForKey:kABUpdatedRecords];
-        NSArray* deletedRecords = [[notification userInfo] objectForKey:kABDeletedRecords];
-        
-        for(NSString* each in updatedRecords){
-            NSLog(@"Updated: %@",each);
+        NSArray *updatedRecords = [[notification userInfo] objectForKey:kABUpdatedRecords];
+        NSArray *deletedRecords = [[notification userInfo] objectForKey:kABDeletedRecords];
+
+        for (NSString *each in updatedRecords) {
+            NSLog(@"Updated: %@", each);
             [self updateRecord:each];
         }
-        
-        for(NSString* each in deletedRecords){
-            NSLog(@"Deleted: %@",each);
+
+        for (NSString *each in deletedRecords) {
+            NSLog(@"Deleted: %@", each);
         }
     });
 }
 
--(void)updateRecord:(NSString*)uniqueId
-{
-    ABRecord* addressBookRecord = [[ABAddressBook sharedAddressBook] recordForUniqueId: uniqueId];
-    NSString* newName = [self nameFromRecord:addressBookRecord];
-    
+- (void)updateRecord:(NSString *)uniqueId {
+    ABRecord *addressBookRecord = [[ABAddressBook sharedAddressBook] recordForUniqueId:uniqueId];
+    NSString *newName = [self nameFromRecord:addressBookRecord];
+
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSManagedObject* coPerson = [self findRecordByUniqueId:uniqueId];
+        NSManagedObject *coPerson = [self findRecordByUniqueId:uniqueId];
         [coPerson setValue:newName forKey:@"name"];
         [[self sharedObjectContext] save:nil];
     });
@@ -84,20 +79,20 @@
 
 - (IBAction)addSelectedPerson:(id)sender {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSArray* selectedRecords = peoplePicker.selectedRecords;
+        NSArray *selectedRecords = peoplePicker.selectedRecords;
         assert([selectedRecords count] == 1);
 
-        ABPerson* selectedPerson = [selectedRecords objectAtIndex:0];
-        NSString* name = [self nameFromRecord: selectedPerson];
-        
+        ABPerson *selectedPerson = [selectedRecords objectAtIndex:0];
+        NSString *name = [self nameFromRecord:selectedPerson];
+
         NSLog(name);
         NSLog([selectedPerson uniqueId]);
-        
-        NSManagedObjectContext* managedObjectContext = [self sharedObjectContext];
+
+        NSManagedObjectContext *managedObjectContext = [self sharedObjectContext];
         assert(managedObjectContext != Nil);
-        
+
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSManagedObject* newEntity = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext:managedObjectContext];
+            NSManagedObject *newEntity = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext:managedObjectContext];
             [newEntity setValue:[selectedPerson uniqueId] forKey:@"uniqueId"];
             [newEntity setValue:name forKey:@"name"];
             [managedObjectContext save:nil];
@@ -106,71 +101,67 @@
     });
 }
 
-- (void) openAddressBook: (NSManagedObject *) receiver  {
+- (void)openAddressBook:(NSManagedObject *)receiver {
     NSString *uniqueId = [receiver uniqueId];
     NSString *urlString = [NSString stringWithFormat:@"addressbook://%@?edit", uniqueId];
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
 
 }
 
-- (void) openHudWindow: (NSManagedObject *) receiver  {
+- (void)openHudWindow:(NSManagedObject *)receiver {
     COCustomAddressHUDController *newController = [[COCustomAddressHUDController alloc] initWith:[receiver objectID]];
     [customAddressHudControllers addObject:newController];
     [newController showWindow:self];
     [newController release];
 }
 
-- (void)handleDoubleClick:(NSArray*)selectedReceivers {
+- (void)handleDoubleClick:(NSArray *)selectedReceivers {
     assert(selectedReceivers != nil);
     if ([selectedReceivers count] == 0) {
         return;
     }
-    NSManagedObject* firstSelectedReceiver = [selectedReceivers objectAtIndex:0];
+    NSManagedObject *firstSelectedReceiver = [selectedReceivers objectAtIndex:0];
     assert(firstSelectedReceiver != nil);
 
-    if([[[firstSelectedReceiver entity] name] isEqualToString:ENTITY_ADDRESSBOOK_PERSON]){
-        [self openAddressBook: firstSelectedReceiver];
-  
+    if ([[[firstSelectedReceiver entity] name] isEqualToString:ENTITY_ADDRESSBOOK_PERSON]) {
+        [self openAddressBook:firstSelectedReceiver];
+
     } else {
-        [self openHudWindow: firstSelectedReceiver];
+        [self openHudWindow:firstSelectedReceiver];
 
     }
 }
 
 #pragma mark Utilities
 
--(NSString*)nameFromRecord:(ABPerson*)record
-{
-    NSString* firstName = [record valueForProperty:kABFirstNameProperty];
-    NSString* lastName = [record valueForProperty:kABLastNameProperty];
-    NSString* name = [NSString stringWithFormat: @"%@ %@", firstName, lastName];
-    
+- (NSString *)nameFromRecord:(ABPerson *)record {
+    NSString *firstName = [record valueForProperty:kABFirstNameProperty];
+    NSString *lastName = [record valueForProperty:kABLastNameProperty];
+    NSString *name = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+
     return name;
 }
 
--(NSManagedObject*)findRecordByUniqueId: (NSString*)uniqueId
-{
+- (NSManagedObject *)findRecordByUniqueId:(NSString *)uniqueId {
     NSManagedObjectContext *moc = [self sharedObjectContext];
-    
+
     NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
-    [fetchRequest setEntity: [NSEntityDescription entityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext: moc]];
-    [fetchRequest setPredicate: [NSPredicate predicateWithFormat:@"uniqueId = %@",uniqueId]];
-    
+    [fetchRequest setEntity:[NSEntityDescription entityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext:moc]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"uniqueId = %@", uniqueId]];
+
     return [[self sharedObjectContext] executeFetchRequest:fetchRequest error:nil];
 }
 
--(NSManagedObjectContext*)sharedObjectContext
-{
+- (NSManagedObjectContext *)sharedObjectContext {
     return [COPersistence managedObjectContext];
 }
 
-- (IBAction)addPerson:(id)sender
-{
-        NSManagedObjectContext *moc = [self sharedObjectContext];
-        NSManagedObject* newEntity = [NSEntityDescription insertNewObjectForEntityForName:
-                                      ENTITY_PERSON inManagedObjectContext:moc];
-        [newEntity setValue:@"Unnamed" forKey:@"name"];
-        [moc save:nil];
+- (IBAction)addPerson:(id)sender {
+    NSManagedObjectContext *moc = [self sharedObjectContext];
+    NSManagedObject *newEntity = [NSEntityDescription insertNewObjectForEntityForName:
+    ENTITY_PERSON                                              inManagedObjectContext:moc];
+    [newEntity setValue:@"Unnamed" forKey:@"name"];
+    [moc save:nil];
 }
 
 @end

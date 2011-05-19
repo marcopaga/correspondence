@@ -12,11 +12,11 @@
 @interface COMessage : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSString * notes;
-@property (nonatomic, retain) NSString * subjectLine;
-@property (nonatomic, retain) NSNumber * fromMe;
-@property (nonatomic, retain) NSDate * date;
-@property (nonatomic, retain) NSManagedObject * topic;
-@property (nonatomic, retain) COMessage * parent;
+@property(nonatomic, retain) NSString *notes;
+@property(nonatomic, retain) NSString *subjectLine;
+@property(nonatomic, retain) NSNumber *fromMe;
+@property(nonatomic, retain) NSDate *date;
+@property(nonatomic, retain) NSManagedObject *topic;
+@property(nonatomic, retain) COMessage *parent;
 
 @end

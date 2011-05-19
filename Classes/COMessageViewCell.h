@@ -12,8 +12,7 @@
 #import "COMessageController.h"
 #import "PXListView.h"
 
-@interface COMessageViewCell : COManagedViewCell
-{
+@interface COMessageViewCell : COManagedViewCell {
 }
 
 - (IBAction)addReplyMessage:(id)sender;

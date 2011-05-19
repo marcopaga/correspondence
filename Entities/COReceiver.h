@@ -13,9 +13,9 @@
 @interface COReceiver : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSSet* topics;
+@property(nonatomic, retain) NSString *name;
+@property(nonatomic, retain) NSSet *topics;
 
-- (NSArray*) createAddressStrings;
+- (NSArray *)createAddressStrings;
 
 @end

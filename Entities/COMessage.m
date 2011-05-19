@@ -17,7 +17,7 @@
 @dynamic topic;
 @dynamic parent;
 
-- (void)awakeFromInsert{
+- (void)awakeFromInsert {
     [super awakeFromInsert];
     [self willChangeValueForKey:@"date"];
     NSDate *now = [NSDate date];
