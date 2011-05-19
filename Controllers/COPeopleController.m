@@ -18,7 +18,6 @@
 - (id)init {
     self = [super init];
     if (self) {
-        [self registerForAddressBookNotifications];
         customAddressHudControllers = [[NSMutableArray array] retain];
     }
 
@@ -26,53 +25,11 @@
 }
 
 - (void)dealloc {
-    [self unregisterFromAddressBookNotifications];
     if (customAddressHudControllers != nil) {
         [customAddressHudControllers release];
         customAddressHudControllers = nil;
     }
     [super dealloc];
-}
-
-#pragma mark Notifications
-
-- (void)registerForAddressBookNotifications {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(addressBookChangedNotification:)
-                                                 name:kABDatabaseChangedExternallyNotification
-                                               object:nil];
-    [ABAddressBook sharedAddressBook];
-}
-
-- (void)unregisterFromAddressBookNotifications {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)addressBookChangedNotification:(NSNotification *)notification {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        NSArray *updatedRecords = [[notification userInfo] objectForKey:kABUpdatedRecords];
-        NSArray *deletedRecords = [[notification userInfo] objectForKey:kABDeletedRecords];
-
-        for (NSString *each in updatedRecords) {
-            NSLog(@"Updated: %@", each);
-            [self updateRecord:each];
-        }
-
-        for (NSString *each in deletedRecords) {
-            NSLog(@"Deleted: %@", each);
-        }
-    });
-}
-
-- (void)updateRecord:(NSString *)uniqueId {
-    ABRecord *addressBookRecord = [[ABAddressBook sharedAddressBook] recordForUniqueId:uniqueId];
-    NSString *newName = [self nameFromRecord:addressBookRecord];
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSManagedObject *coPerson = [self findRecordByUniqueId:uniqueId];
-        [coPerson setValue:newName forKey:@"name"];
-        [[self sharedObjectContext] save:nil];
-    });
 }
 
 #pragma mark Event handling

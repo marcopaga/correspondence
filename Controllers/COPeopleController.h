@@ -20,17 +20,11 @@
 
 @property(retain) NSMutableArray *customAddressHudControllers;
 
-- (void)registerForAddressBookNotifications;
-
-- (void)unregisterFromAddressBookNotifications;
-
 - (IBAction)addSelectedPerson:(id)sender;
 
 - (NSManagedObject *)findRecordByUniqueId:(NSString *)uniqueId;
 
 - (NSString *)nameFromRecord:(ABPerson *)person;
-
-- (void)updateRecord:(NSString *)uniqueId;
 
 - (IBAction)addPerson:(id)sender;
 @end
