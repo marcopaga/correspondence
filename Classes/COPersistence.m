@@ -17,8 +17,6 @@
         return managedObjectModel;
     }
 
-//    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
-
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Correspondence_DataModel" ofType:@"momd"];
     NSURL *momURL = [NSURL fileURLWithPath:path];
     managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:momURL];
@@ -48,9 +46,11 @@
     url = [NSURL fileURLWithPath:[applicationSupportFolder stringByAppendingPathComponent:coreDataFile]];
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
 
-    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-    [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-            [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+    NSDictionary *options =
+        [NSDictionary dictionaryWithObjectsAndKeys:
+            [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+            [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil
+         ];
 
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:options error:&error]) {
         [[NSApplication sharedApplication] presentError:error];

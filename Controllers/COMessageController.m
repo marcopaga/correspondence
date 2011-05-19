@@ -27,7 +27,7 @@
 }
 
 - (void)addReplyToMessage:(COMessage *)message {
-    COMessage *replyMessage = [self newObject];
+    COMessage *replyMessage = [[self newObject] autorelease];
     [replyMessage setTopic:[message topic]];
     [replyMessage setParent:message];
     [replyMessage setSubjectLine:[@"Re: " stringByAppendingString:[message subjectLine]]];
