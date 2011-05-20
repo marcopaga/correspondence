@@ -10,6 +10,22 @@
 
 @implementation COAppDelegate
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        notificationHandler = [CONotificationHandler new];
+    }
+    
+    return self;
+}
+
+- (void)dealloc
+{
+    [notificationHandler release];
+    notificationHandler = nil;
+    [super dealloc];
+}
 
 - (NSManagedObjectContext *)managedObjectContext {
     return [COPersistence managedObjectContext];

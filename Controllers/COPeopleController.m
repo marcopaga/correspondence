@@ -99,16 +99,6 @@
     return name;
 }
 
-- (NSManagedObject *)findRecordByUniqueId:(NSString *)uniqueId {
-    NSManagedObjectContext *moc = [self sharedObjectContext];
-
-    NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
-    [fetchRequest setEntity:[NSEntityDescription entityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext:moc]];
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"uniqueId = %@", uniqueId]];
-
-    return [[self sharedObjectContext] executeFetchRequest:fetchRequest error:nil];
-}
-
 - (NSManagedObjectContext *)sharedObjectContext {
     return [COPersistence managedObjectContext];
 }

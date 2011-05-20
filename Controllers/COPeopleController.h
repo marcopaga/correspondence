@@ -22,9 +22,5 @@
 
 - (IBAction)addSelectedPerson:(id)sender;
 
-- (NSManagedObject *)findRecordByUniqueId:(NSString *)uniqueId;
-
-- (NSString *)nameFromRecord:(ABPerson *)person;
-
 - (IBAction)addPerson:(id)sender;
 @end

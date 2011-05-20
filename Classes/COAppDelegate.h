@@ -9,9 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import "COConstants.h"
 #import "COPersistence.h"
+#import "CONotificationHandler.h"
 
 @interface COAppDelegate : NSObject <NSApplicationDelegate> {
     IBOutlet NSWindow *window;
+    CONotificationHandler *notificationHandler;
 }
 
 - (NSManagedObjectContext *)managedObjectContext;
