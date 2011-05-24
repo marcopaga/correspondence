@@ -10,14 +10,9 @@
 
 @implementation COAppDelegate
 
-- (id)init
+-(void) awakeFromNib
 {
-    self = [super init];
-    if (self) {
-        notificationHandler = [CONotificationHandler new];
-    }
-    
-    return self;
+    notificationHandler = [CONotificationHandler new];
 }
 
 - (void)dealloc

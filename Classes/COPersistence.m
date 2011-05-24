@@ -11,8 +11,14 @@
 
 @implementation COPersistence
 
-+ (NSManagedObjectModel *)managedObjectModel {
++ (void)initialize
+{
+    persistentStoreCoordinatorLock = [NSLock new];
+    
+}
 
++ (NSManagedObjectModel *)managedObjectModel
+{
     if (managedObjectModel != nil) {
         return managedObjectModel;
     }
@@ -21,11 +27,11 @@
     NSURL *momURL = [NSURL fileURLWithPath:path];
     managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:momURL];
 
-
     return managedObjectModel;
 }
 
-+ (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
++ (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
 
     if (persistentStoreCoordinator != nil) {
         return persistentStoreCoordinator;
@@ -38,8 +44,14 @@
 
     fileManager = [NSFileManager defaultManager];
     applicationSupportFolder = [[[NSApplication sharedApplication] delegate] applicationSupportFolder];
-    if (![fileManager fileExistsAtPath:applicationSupportFolder isDirectory:NULL]) {
-        [fileManager createDirectoryAtPath:applicationSupportFolder withIntermediateDirectories:YES attributes:nil error:&error];
+    if (![fileManager
+            fileExistsAtPath: applicationSupportFolder
+                 isDirectory: NULL]) {
+        [fileManager
+                     createDirectoryAtPath: applicationSupportFolder
+               withIntermediateDirectories: YES
+                                attributes: nil
+                                     error: &error ];
     }
 
     NSString *coreDataFile = [APP_NAME stringByAppendingString:@".sqlite"];
@@ -55,12 +67,12 @@
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:options error:&error]) {
         [[NSApplication sharedApplication] presentError:error];
     }
-
+    
     return persistentStoreCoordinator;
 }
 
-+ (NSManagedObjectContext *)managedObjectContext {
-
++ (NSManagedObjectContext *)managedObjectContext
+{
     if (managedObjectContext != nil) {
         return managedObjectContext;
     }
@@ -70,7 +82,6 @@
         managedObjectContext = [[NSManagedObjectContext alloc] init];
         [managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
-
     return managedObjectContext;
 }
 

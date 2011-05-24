@@ -23,6 +23,8 @@
 
 @end
 
+static NSLock *persistentStoreCoordinatorLock;
+
 static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 static NSManagedObjectModel *managedObjectModel;
 static NSManagedObjectContext *managedObjectContext;    

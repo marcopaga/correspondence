@@ -75,6 +75,9 @@
     });
 }
 
+/*
+ Needs to be executed on the main UI thread
+ */
 - (NSManagedObject *)findRecordByUniqueId:(NSString *)uniqueId {
     NSManagedObjectContext *moc = [COPersistence managedObjectContext];
     
@@ -89,7 +92,7 @@
 
 - (void) scanAddressBookForChanges
 {
-    dispatch_async(DISPATCH_QUEUE_PRIORITY_LOW, ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         NSPersistentStoreCoordinator *persistentStoreCoordinator = [COPersistence persistentStoreCoordinator];
         NSManagedObjectContext *managedObjectContext = [NSManagedObjectContext new];
         [managedObjectContext setPersistentStoreCoordinator:persistentStoreCoordinator];
@@ -108,6 +111,7 @@
         {
             ABAddressBook *addressBook = [ABAddressBook sharedAddressBook];
             for (COAddressbookPerson *eachPerson in array) {
+                NSLog([eachPerson description]);
                 NSString *uniqueId = eachPerson.uniqueId;
                 ABRecord *foundRecord = [addressBook recordForUniqueId: uniqueId];
                 
@@ -145,7 +149,8 @@
         NSManagedObject *oldEntity = [managedObjectContext objectWithID: objectId];
         
         NSManagedObject *newEntity = [NSEntityDescription
-                               insertNewObjectForEntityForName: ENTITY_PERSON                                               inManagedObjectContext: managedObjectContext];
+                               insertNewObjectForEntityForName: ENTITY_PERSON
+                                        inManagedObjectContext: managedObjectContext];
         [newEntity setValue: [oldEntity valueForKey:@"name"] forKey:@"name"];
         
         [managedObjectContext deleteObject:oldEntity];
