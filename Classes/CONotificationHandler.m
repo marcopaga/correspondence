@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         [self registerForAddressBookNotifications];
+        [self scanAddressBookForChanges];
     }
     
     return self;
@@ -78,11 +79,80 @@
     NSManagedObjectContext *moc = [COPersistence managedObjectContext];
     
     NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
-    [fetchRequest setEntity:[NSEntityDescription entityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext:moc]];
+    [fetchRequest setEntity:[NSEntityDescription
+                                     entityForName: ENTITY_ADDRESSBOOK_PERSON
+                             inManagedObjectContext: moc]];
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"uniqueId = %@", uniqueId]];
     
     return [[COPersistence managedObjectContext] executeFetchRequest:fetchRequest error:nil];
 }
 
+- (void) scanAddressBookForChanges
+{
+    dispatch_async(DISPATCH_QUEUE_PRIORITY_LOW, ^{
+        NSPersistentStoreCoordinator *persistentStoreCoordinator = [COPersistence persistentStoreCoordinator];
+        NSManagedObjectContext *managedObjectContext = [NSManagedObjectContext new];
+        [managedObjectContext setPersistentStoreCoordinator:persistentStoreCoordinator];
+        
+        NSEntityDescription *entityDescription = [NSEntityDescription
+                                                     entityForName: ENTITY_ADDRESSBOOK_PERSON
+                                            inManagedObjectContext: managedObjectContext ];
+        NSFetchRequest *request = [[NSFetchRequest new] autorelease];
+        [request setEntity: entityDescription];
+
+        NSError *error = nil;
+        NSArray *array = [managedObjectContext
+                            executeFetchRequest: request
+                                          error: &error];
+        if (array != nil)
+        {
+            ABAddressBook *addressBook = [ABAddressBook sharedAddressBook];
+            for (COAddressbookPerson *eachPerson in array) {
+                NSString *uniqueId = eachPerson.uniqueId;
+                ABRecord *foundRecord = [addressBook recordForUniqueId: uniqueId];
+                
+                if(foundRecord != nil){
+                    [self updateRecord: [eachPerson objectID] toMatch: foundRecord];
+                } else {
+                    [self convertRecordToCustomEntity: [eachPerson objectID] ];
+                }
+                
+            }
+        }
+        else
+        {
+            NSLog(@"Could not update local database.");
+            NSLog([error description]);
+        }
+    });
+}
+
+- (void) updateRecord: (NSString *) objectId toMatch: (ABRecord *) record
+{
+    NSString *name = [self nameFromRecord: record];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSManagedObjectContext *managedObjectContext = [COPersistence managedObjectContext];
+        COReceiver *receiver = [managedObjectContext objectWithID: objectId];
+        receiver.name = name;
+        [managedObjectContext save: nil];
+    });
+}
+
+- (void) convertRecordToCustomEntity: (NSString *) objectId
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSManagedObjectContext *managedObjectContext = [COPersistence managedObjectContext];
+        NSManagedObject *oldEntity = [managedObjectContext objectWithID: objectId];
+        
+        NSManagedObject *newEntity = [NSEntityDescription
+                               insertNewObjectForEntityForName: ENTITY_PERSON                                               inManagedObjectContext: managedObjectContext];
+        [newEntity setValue: [oldEntity valueForKey:@"name"] forKey:@"name"];
+        
+        [managedObjectContext deleteObject:oldEntity];
+        
+        [managedObjectContext save:nil];
+
+    });    
+}
 
 @end

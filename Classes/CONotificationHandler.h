@@ -10,6 +10,8 @@
 #import <AddressBook/AddressBook.h>
 #import "COPersistence.h"
 #import "COConstants.h"
+#import "COPerson.h"
+#import "COAddressbookPerson.h"
 
 
 @interface CONotificationHandler : NSObject {
@@ -25,5 +27,11 @@
 - (NSManagedObject *)findRecordByUniqueId:(NSString *)uniqueId;
 
 - (NSString *)nameFromRecord:(ABPerson *)person;
+
+- (void) scanAddressBookForChanges;
+
+- (void) updateRecord: (NSString *) objectId toMatch: (ABRecord *) record;
+
+- (void) convertRecordToCustomEntity: (NSString *) objectId;
 
 @end
