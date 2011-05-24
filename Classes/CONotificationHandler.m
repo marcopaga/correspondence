@@ -60,6 +60,12 @@
         
         for (NSString *each in deletedRecords) {
             NSLog(@"Deleted: %@", each);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSManagedObject *receiver = [self findRecordByUniqueId: each];
+                if(receiver != nil) {
+                    [self convertRecordToCustomEntity: [receiver objectID]];    
+                }
+            });
         }
     });
 }
