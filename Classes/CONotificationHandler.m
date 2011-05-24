@@ -122,7 +122,10 @@
                 ABRecord *foundRecord = [addressBook recordForUniqueId: uniqueId];
                 
                 if(foundRecord != nil){
-                    [self updateRecord: [eachPerson objectID] toMatch: foundRecord];
+                    NSString *desiredName = [self nameFromRecord: foundRecord];
+                    if(![eachPerson.name isEqualToString: desiredName ]){
+                        [self updateRecord: [eachPerson objectID] toMatch: desiredName];
+                    }
                 } else {
                     [self convertRecordToCustomEntity: [eachPerson objectID] ];
                 }
@@ -137,13 +140,12 @@
     });
 }
 
-- (void) updateRecord: (NSString *) objectId toMatch: (ABRecord *) record
+- (void) updateRecord: (NSString *) objectId toMatch: (NSString *) desiredName
 {
-    NSString *name = [self nameFromRecord: record];
     dispatch_async(dispatch_get_main_queue(), ^{
         NSManagedObjectContext *managedObjectContext = [COPersistence managedObjectContext];
         COReceiver *receiver = [managedObjectContext objectWithID: objectId];
-        receiver.name = name;
+        receiver.name = desiredName;
         [managedObjectContext save: nil];
     });
 }

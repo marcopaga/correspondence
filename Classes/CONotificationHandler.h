@@ -30,7 +30,7 @@
 
 - (void) scanAddressBookForChanges;
 
-- (void) updateRecord: (NSString *) objectId toMatch: (ABRecord *) record;
+- (void) updateRecord: (NSString *) objectId toMatch: (NSString *) desiredName;
 
 - (void) convertRecordToCustomEntity: (NSString *) objectId;
 
