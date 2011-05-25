@@ -95,8 +95,22 @@
     
     return [[COPersistence managedObjectContext] executeFetchRequest:fetchRequest error:nil];
 }
-
 - (void) scanAddressBookForChanges
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        NSPersistentStoreCoordinator *persistentStoreCoordinator = [COPersistence persistentStoreCoordinator];
+        NSManagedObjectContext *managedObjectContext = [NSManagedObjectContext new];
+        [managedObjectContext setPersistentStoreCoordinator:persistentStoreCoordinator];
+        
+        @try {
+            [self scanAddressBookForChangesIn: managedObjectContext];
+        } @finally {
+            [managedObjectContext release];    
+        }
+    });    
+}
+
+- (void) scanAddressBookForChangesIn: (NSManagedObjectContext *) managedObjectContext
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         NSPersistentStoreCoordinator *persistentStoreCoordinator = [COPersistence persistentStoreCoordinator];

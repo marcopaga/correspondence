@@ -30,6 +30,8 @@
 
 - (void) scanAddressBookForChanges;
 
+- (void) scanAddressBookForChangesIn: (NSManagedObjectContext *) managedObjectContext;
+
 - (void) updateRecord: (NSString *) objectId toMatch: (NSString *) desiredName;
 
 - (void) convertRecordToCustomEntity: (NSString *) objectId;
