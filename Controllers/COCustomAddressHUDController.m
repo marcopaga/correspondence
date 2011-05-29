@@ -23,7 +23,12 @@
 }
 
 - (IBAction)okButton:(id)sender {
-    [[COPersistence managedObjectContext] save:nil];
+    NSError *error = nil;
+    [[COPersistence managedObjectContext] save: &error];
+    if(error != nil){
+        int alertReturn = NSRunAlertPanel(nil, @"Could not create new entry", @"OK",nil,nil);
+        NSLog([error description]);
+    }
 }
 
 - (NSManagedObject *)loadEntityFor:(NSString *)objectId {

@@ -52,9 +52,13 @@
             NSManagedObject *newEntity = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_ADDRESSBOOK_PERSON inManagedObjectContext:managedObjectContext];
             [newEntity setValue:[selectedPerson uniqueId] forKey:@"uniqueId"];
             [newEntity setValue:name forKey:@"name"];
-            [managedObjectContext save:nil];
+            NSError *error = nil;
+            [managedObjectContext save: &error];
+            if(error != nil){
+                int alertReturn = NSRunAlertPanel(nil, @"Could not create new entry", @"OK",nil,nil);
+                NSLog([error description]);
+            }
         });
-        //TODO: Check for error
     });
 }
 
