@@ -16,7 +16,6 @@
     self = [super init];
     if (self) {
         [self registerForAddressBookNotifications];
-        [self scanAddressBookForChanges];
     }
     
     return self;
@@ -61,7 +60,7 @@
         for (NSString *each in deletedRecords) {
             NSLog(@"Deleted: %@", each);
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSManagedObject *receiver = [self findRecordByUniqueId: each];
+                COAddressbookPerson *receiver = [self findRecordByUniqueId: each];
                 if(receiver != nil) {
                     [self convertRecordToCustomEntity: [receiver objectID]];    
                 }
@@ -136,11 +135,13 @@
                 ABRecord *foundRecord = [addressBook recordForUniqueId: uniqueId];
                 
                 if(foundRecord != nil){
+                    NSLog(@"Updating the name");                    
                     NSString *desiredName = [self nameFromRecord: foundRecord];
                     if(![eachPerson.name isEqualToString: desiredName ]){
                         [self updateRecord: [eachPerson objectID] toMatch: desiredName];
                     }
                 } else {
+                    NSLog(@"Converting to COPerson");
                     [self convertRecordToCustomEntity: [eachPerson objectID] ];
                 }
                 
@@ -168,12 +169,18 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSManagedObjectContext *managedObjectContext = [COPersistence managedObjectContext];
-        NSManagedObject *oldEntity = [managedObjectContext objectWithID: objectId];
+        COAddressbookPerson *oldEntity = [managedObjectContext objectWithID: objectId];
         
-        NSManagedObject *newEntity = [NSEntityDescription
+        COPerson *newEntity = [NSEntityDescription
                                insertNewObjectForEntityForName: ENTITY_PERSON
                                         inManagedObjectContext: managedObjectContext];
-        [newEntity setValue: [oldEntity valueForKey:@"name"] forKey:@"name"];
+        newEntity.name = oldEntity.name;
+        newEntity.topics = oldEntity.topics;
+        
+        for (NSManagedObject* eachTopic in newEntity.topics) {
+            [oldEntity removeTopicsObject: eachTopic];
+            [eachTopic setValue: newEntity forKey:@"person"];
+        }
         
         [managedObjectContext deleteObject:oldEntity];
         

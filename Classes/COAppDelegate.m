@@ -13,6 +13,7 @@
 -(void) awakeFromNib
 {
     notificationHandler = [CONotificationHandler new];
+    [notificationHandler scanAddressBookForChanges];
 }
 
 - (void)dealloc
