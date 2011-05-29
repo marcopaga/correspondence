@@ -19,4 +19,6 @@
     NSPersistentStore *persistentStore;
 }
 
+- (NSManagedObject *)newEntity:(NSString *)entityName;
+
 @end

@@ -51,6 +51,13 @@
     managedObjectModel = nil;
 }
 
+- (NSManagedObject *)newEntity:(NSString *)entityName {
+    return [NSEntityDescription
+            insertNewObjectForEntityForName:entityName
+                     inManagedObjectContext:objectContext];
+
+}
+
 - (void)testThatEnvironmentWorks {
     STAssertNotNil(persistentStore, @"No persistent store set up!");
     STAssertNotNil(objectContext, @"No object context set up!");

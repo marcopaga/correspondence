@@ -38,6 +38,7 @@
 		A975CBB11318444200AAC978 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CBB01318444200AAC978 /* Cocoa.framework */; };
 		A975CBB71318444200AAC978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A975CBB51318444200AAC978 /* InfoPlist.strings */; };
 		A975CBBC1318444200AAC978 /* AddressBookExplorationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A975CBBB1318444200AAC978 /* AddressBookExplorationTest.m */; };
+		A9890F1513922AA600D43D46 /* CorrespondenceBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9890F131392298400D43D46 /* CorrespondenceBaseTest.m */; };
 		A99164891385846C0058C2EA /* COListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A99164821385846C0058C2EA /* COListView.m */; };
 		A991648A1385846C0058C2EA /* COListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A99164821385846C0058C2EA /* COListView.m */; };
 		A991648B1385846C0058C2EA /* COManagedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A99164841385846C0058C2EA /* COManagedViewCell.m */; };
@@ -118,6 +119,8 @@
 		A975CBB81318444200AAC978 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		A975CBB91318444200AAC978 /* AddressBookExplorationTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookExplorationTest.h; sourceTree = "<group>"; };
 		A975CBBB1318444200AAC978 /* AddressBookExplorationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookExplorationTest.m; sourceTree = "<group>"; };
+		A9890F121392298400D43D46 /* CorrespondenceBaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorrespondenceBaseTest.h; sourceTree = "<group>"; };
+		A9890F131392298400D43D46 /* CorrespondenceBaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorrespondenceBaseTest.m; sourceTree = "<group>"; };
 		A99164811385846C0058C2EA /* COListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COListView.h; sourceTree = "<group>"; };
 		A99164821385846C0058C2EA /* COListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COListView.m; sourceTree = "<group>"; };
 		A99164831385846C0058C2EA /* COManagedViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COManagedViewCell.h; sourceTree = "<group>"; };
@@ -343,6 +346,8 @@
 				A9CB4BBF1357316C009A166C /* ReceiverTests.m */,
 				A966F73E137F11EF007488DA /* AbstractCoreDataTest.h */,
 				A966F73F137F11EF007488DA /* AbstractCoreDataTest.m */,
+				A9890F121392298400D43D46 /* CorrespondenceBaseTest.h */,
+				A9890F131392298400D43D46 /* CorrespondenceBaseTest.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -552,10 +557,8 @@
 				A99F6236135734E8001F69CE /* COAddressbookPerson.m in Sources */,
 				A99F6234135734E3001F69CE /* COPerson.m in Sources */,
 				A99F6235135734E6001F69CE /* COReceiver.m in Sources */,
-				A99F6230135733EF001F69CE /* ReceiverTests.m in Sources */,
 				A99F6233135734E1001F69CE /* COMessage.m in Sources */,
 				A9EF1EA613842DE7005FA213 /* COConstants.m in Sources */,
-				A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */,
 				2E33CB8F137FBF70009CAA35 /* PXListView+UserInteraction.m in Sources */,
 				A9EF1EA413839AFC005FA213 /* COPersistence.m in Sources */,
 				2E52894D13843A91002F1F93 /* Correspondence_DataModel.xcdatamodeld in Sources */,
@@ -568,7 +571,10 @@
 				A99164A0138584920058C2EA /* COMessageController.m in Sources */,
 				A99164A2138584920058C2EA /* COPeopleController.m in Sources */,
 				A99164A4138584920058C2EA /* COTopicController.m in Sources */,
+				A9890F1513922AA600D43D46 /* CorrespondenceBaseTest.m in Sources */,
+				A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */,
 				A99164A8138629190058C2EA /* CONotificationHandler.m in Sources */,
+				A99F6230135733EF001F69CE /* ReceiverTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
