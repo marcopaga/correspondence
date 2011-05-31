@@ -75,6 +75,8 @@
 		A9EF1EA313839AFC005FA213 /* COPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1EA213839AFC005FA213 /* COPersistence.m */; };
 		A9EF1EA413839AFC005FA213 /* COPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1EA213839AFC005FA213 /* COPersistence.m */; };
 		A9EF1EA613842DE7005FA213 /* COConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A974397A13351EDD00D4262D /* COConstants.m */; };
+		A9F012DB1394D72000E2BA10 /* COTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F012DA1394D72000E2BA10 /* COTopic.m */; };
+		A9F012DC1394D72000E2BA10 /* COTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F012DA1394D72000E2BA10 /* COTopic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +158,8 @@
 		A9CB4BBF1357316C009A166C /* ReceiverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverTests.m; sourceTree = "<group>"; };
 		A9EF1EA113839AFC005FA213 /* COPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPersistence.h; sourceTree = "<group>"; };
 		A9EF1EA213839AFC005FA213 /* COPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPersistence.m; sourceTree = "<group>"; };
+		A9F012D91394D72000E2BA10 /* COTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; path = COTopic.h; sourceTree = "<group>"; };
+		A9F012DA1394D72000E2BA10 /* COTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTopic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +328,8 @@
 		A95D7BBE132760970019DEEB /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				A9F012D91394D72000E2BA10 /* COTopic.h */,
+				A9F012DA1394D72000E2BA10 /* COTopic.m */,
 				2E2A5EC71326727700D7C5EE /* COMessage.h */,
 				2E2A5EC81326727700D7C5EE /* COMessage.m */,
 				A9CB4BB213572918009A166C /* COPerson.h */,
@@ -543,6 +549,7 @@
 				A99164A1138584920058C2EA /* COPeopleController.m in Sources */,
 				A99164A3138584920058C2EA /* COTopicController.m in Sources */,
 				A99164A7138629190058C2EA /* CONotificationHandler.m in Sources */,
+				A9F012DB1394D72000E2BA10 /* COTopic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +582,7 @@
 				A966F740137F11EF007488DA /* AbstractCoreDataTest.m in Sources */,
 				A99164A8138629190058C2EA /* CONotificationHandler.m in Sources */,
 				A99F6230135733EF001F69CE /* ReceiverTests.m in Sources */,
+				A9F012DC1394D72000E2BA10 /* COTopic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
