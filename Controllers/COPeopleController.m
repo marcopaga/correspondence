@@ -70,10 +70,9 @@
 }
 
 - (void)openHudWindow:(NSManagedObject *)receiver {
-    COCustomAddressHUDController *newController = [[COCustomAddressHUDController alloc] initWith:[receiver objectID]];
-    [customAddressHudControllers addObject:newController];
+    COCustomAddressHUDController *newController = [[COCustomAddressHUDController alloc] initFor:[receiver objectID] andRegisterAt: self];
     [newController showWindow:self];
-    [newController release];
+    [newController autorelease];
 }
 
 - (void)handleDoubleClick:(NSArray *)selectedReceivers {
@@ -113,6 +112,20 @@
     ENTITY_PERSON                                              inManagedObjectContext:moc];
     [newEntity setValue:@"Unnamed" forKey:@"name"];
     [moc save:nil];
+}
+
+#pragma mark COOwner protocol methods
+
+- (void) registerDependentController:(id)controller;
+{
+    [controller retain];
+    [customAddressHudControllers addObject: controller];
+}
+
+- (void) unregisterDependentController:(id)controller;
+{
+    [customAddressHudControllers removeObject: controller];
+    [controller autorelease];
 }
 
 @end

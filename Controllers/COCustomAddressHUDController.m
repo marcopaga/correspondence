@@ -12,14 +12,27 @@
 @implementation COCustomAddressHUDController
 
 @synthesize entity;
+@synthesize owner;
 
-- (id)initWith:(NSString *)objectId {
+- (id)initFor:(NSString *)objectId andRegisterAt:(id)owningController {
     self = [super initWithWindowNibName:NIB_CUSTOM_ADDRESS];
     if (self) {
+        if([owningController conformsToProtocol: @protocol(COOwner)]){
+            [owningController registerDependentController: self];    
+        }
+        [self setValue:owningController forKey: @"owner"];        
         entity = [self loadEntityFor:objectId];
     }
 
     return self;
+}
+
+- (void)dealloc {
+    if([owner conformsToProtocol: @protocol(COOwner)]){
+        [owner unregisterDependentController: self];    
+    }
+
+    [super dealloc];
 }
 
 - (IBAction)okButton:(id)sender {
@@ -28,7 +41,11 @@
     if(error != nil){
         int alertReturn = NSRunAlertPanel(nil, @"Could not create new entry", @"OK",nil,nil);
         NSLog([error description]);
-    }
+    } else {
+        [owner unregisterHudController: self];
+        [self close];
+    
+    }    
 }
 
 - (NSManagedObject *)loadEntityFor:(NSString *)objectId {

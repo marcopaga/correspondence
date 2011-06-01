@@ -158,8 +158,9 @@
 		A9CB4BBF1357316C009A166C /* ReceiverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverTests.m; sourceTree = "<group>"; };
 		A9EF1EA113839AFC005FA213 /* COPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPersistence.h; sourceTree = "<group>"; };
 		A9EF1EA213839AFC005FA213 /* COPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPersistence.m; sourceTree = "<group>"; };
-		A9F012D91394D72000E2BA10 /* COTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; path = COTopic.h; sourceTree = "<group>"; };
+		A9F012D91394D72000E2BA10 /* COTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COTopic.h; sourceTree = "<group>"; };
 		A9F012DA1394D72000E2BA10 /* COTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTopic.m; sourceTree = "<group>"; };
+		A9F012DE13960F7400E2BA10 /* COOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOwner.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +196,7 @@
 				A974397A13351EDD00D4262D /* COConstants.m */,
 				A9EF1EA113839AFC005FA213 /* COPersistence.h */,
 				A9EF1EA213839AFC005FA213 /* COPersistence.m */,
+				A9F012DE13960F7400E2BA10 /* COOwner.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

@@ -9,19 +9,24 @@
 #import <Cocoa/Cocoa.h>
 #import "COConstants.h"
 #import "COPersistence.h"
+#import "COPeopleController.h"
+#import "COPerson.h"
 #import "COCustomAddressHUDController.h"
+#import "COOwner.h"
 
 @interface COCustomAddressHUDController : NSWindowController {
 
-    NSManagedObject *entity;
+    COPerson *entity;
+    id owner;
 }
 
 @property(retain) NSManagedObject *entity;
+@property(retain) id owner;
 
-- (id)initWith:(NSString *)objectId;
+- (id)initFor:(NSString *)objectId andRegisterAt:(id)owner;
 
 - (IBAction)okButton:(id)sender;
 
-- (NSManagedObject *)loadEntityFor:(NSString *)objectId;
+- (COPerson *)loadEntityFor:(NSString *)objectId;
 
 @end

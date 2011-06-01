@@ -12,8 +12,9 @@
 #import "COPersistence.h"
 #import "COConstants.h"
 #import "COCustomAddressHUDController.h"
+#import "COOwner.h"
 
-@interface COPeopleController : NSObject {
+@interface COPeopleController : NSObject <COOwner> {
     IBOutlet ABPeoplePickerView *peoplePicker;
     NSMutableArray *customAddressHudControllers;
 }
@@ -23,4 +24,8 @@
 - (IBAction)addSelectedPerson:(id)sender;
 
 - (IBAction)addPerson:(id)sender;
+
+- (void) registerDependentController:(id)controller;
+
+- (void) unregisterDependentController:(id)controller;
 @end
