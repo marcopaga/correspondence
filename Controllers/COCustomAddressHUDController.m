@@ -20,7 +20,7 @@
         if([owningController conformsToProtocol: @protocol(COOwner)]){
             [owningController registerDependentController: self];    
         }
-        [self setValue:owningController forKey: @"owner"];        
+        owner = owningController;
         entity = [self loadEntityFor:objectId];
     }
 
