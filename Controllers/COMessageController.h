@@ -13,6 +13,8 @@
 
 
 @interface COMessageController : COListController {
+    
+    IBOutlet PXListView *parentView;
 
 }
 

@@ -2634,6 +2634,14 @@
 					</object>
 					<int key="connectionID">771</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">parentView</string>
+						<reference key="source" ref="1043421619"/>
+						<reference key="destination" ref="185493560"/>
+					</object>
+					<int key="connectionID">772</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -4443,7 +4451,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">771</int>
+			<int key="maxID">772</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4508,6 +4516,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">COMessageController</string>
 					<string key="superclassName">COListController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">parentView</string>
+						<string key="NS.object.0">PXListView</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">parentView</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">parentView</string>
+							<string key="candidateClassName">PXListView</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/COMessageController.h</string>

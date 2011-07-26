@@ -23,7 +23,9 @@
     NSIndexSet *selectedRows = [aListView selectedRows];
     // select items in arraycontroller
     [self setSelectionIndexes:selectedRows];
-
+    
+    // redraw parent's selected row to show that it has lost focus
+    [[parentView cellForRowAtIndex:[parentView selectedRow]] setNeedsDisplay:YES];
 }
 
 - (void)addReplyToMessage:(COMessage *)message {

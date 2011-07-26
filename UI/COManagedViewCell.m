@@ -21,8 +21,14 @@
 @synthesize objectController;
 
 - (void)drawRect:(NSRect)dirtyRect {
+        
     if ([self isSelected]) {
-        [[NSColor selectedControlColor] set];
+        id obj = [[NSApp mainWindow] firstResponder];
+        if ([self listView] == obj) {
+            [[NSColor selectedControlColor] set];
+        } else {
+            [[NSColor secondarySelectedControlColor] set];
+        }
     }
     else {
         [[NSColor whiteColor] set];
