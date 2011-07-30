@@ -23,6 +23,17 @@
     [listView setAllowsEmptySelection:YES];
     [listView setAllowsMultipleSelection:YES];
     [listView reloadData];
+    
+    NSSortDescriptor *sort = [self getDefaultSortDescriptor];
+    if (sort != nil) {
+        [self setSortDescriptors:[NSArray arrayWithObject:sort]];  
+    }
+    
+    [super awakeFromNib];  
+}
+
+- (NSSortDescriptor *)getDefaultSortDescriptor {
+    return nil;
 }
 
 - (void)addObject:(id)object {

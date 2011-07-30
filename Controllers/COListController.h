@@ -23,5 +23,6 @@
 }
 
 @property(nonatomic, retain) NSString *nibName;
+- (NSSortDescriptor *)getDefaultSortDescriptor;
 
 @end

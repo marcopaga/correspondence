@@ -16,6 +16,11 @@
     nibName = [NSString stringWithString:@"MessageViewCell"];
 }
 
+- (NSSortDescriptor *)getDefaultSortDescriptor {
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    return sort;
+}
+
 // Change the MessageDetailView
 
 - (void)listViewSelectionDidChange:(NSNotification *)aNotification {

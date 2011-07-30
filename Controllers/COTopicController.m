@@ -16,6 +16,11 @@
     nibName = [NSString stringWithString:@"TopicViewCell"];
 }
 
+- (NSSortDescriptor *)getDefaultSortDescriptor {
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"lastModified" ascending:NO];
+    return sort;
+}
+
 - (void)listViewSelectionDidChange:(NSNotification *)aNotification {
     PXListView *aListView = [aNotification object];
     NSIndexSet *selectedRows = [aListView selectedRows];
