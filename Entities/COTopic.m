@@ -19,6 +19,13 @@
 @dynamic messages;
 @dynamic context;
 
+- (void)awakeFromInsert {
+    [super awakeFromInsert];
+    [self willChangeValueForKey:@"lastModified"];
+    NSDate *now = [NSDate date];
+    [self setValue:now forKey:@"lastModified"];
+    [self didChangeValueForKey:@"lastModified"];
+}
 
 - (void)addMessagesObject:(COMessage *)value {    
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
