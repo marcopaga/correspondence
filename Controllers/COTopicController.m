@@ -29,5 +29,10 @@
     [childView reloadData];
 }
 
+- (void) tableViewSelectionDidChange: (NSNotification *) notification
+{
+    [listView reloadData];
+}
+
 @end
 
